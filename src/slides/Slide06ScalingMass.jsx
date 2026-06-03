@@ -4,17 +4,17 @@ import CardPitch from '../components/CardPitch';
 
 export default function Slide06ScalingMass() {
   return (
-    <div className="w-full h-full flex items-center justify-center px-8 sm:px-12 py-6 overflow-hidden relative">
-      <div className="absolute inset-0 pointer-events-none dot-grid" />
-      <div className="absolute -top-28 -right-28 w-[480px] h-[480px] rounded-full pointer-events-none glow-blob-brand" />
-      <div className="absolute -bottom-36 -left-36 w-[440px] h-[440px] rounded-full pointer-events-none glow-blob-ct" />
-      <div className="absolute top-1/3 right-1/4 w-[280px] h-[280px] rounded-full pointer-events-none glow-blob-violet" />
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 pointer-events-none bg-hero-pattern" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-brand" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-fade" />
 
-      <div className="relative z-10 max-w-5xl w-full">
+      <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 w-full">
         <SectionLabel>Quantification</SectionLabel>
 
         <FragmentReveal>
-          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-8">
+          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-8 text-[var(--foreground)]">
             Not Just If It Scales —{' '}
             <span className="stat-gradient">How Much</span> and{' '}
             <span className="text-niskala-ct">Where</span>
@@ -27,10 +27,10 @@ export default function Slide06ScalingMass() {
               <p className="text-[0.6rem] font-bold uppercase tracking-[0.15em] text-[#5170ff] mb-1">
                 What PHREEQC computes
               </p>
-              <h3 className="text-lg font-bold mb-2">Scaling Mass</h3>
-              <p className="text-sm text-[#71717a] leading-relaxed mb-4 flex-1">
+              <h3 className="text-lg font-bold mb-2 text-[var(--foreground)]">Scaling Mass</h3>
+              <p className="text-sm text-[var(--muted-foreground)] leading-relaxed mb-4 flex-1">
                 PHREEQC{' '}
-                <span className="font-mono text-xs bg-[#f4f4f5] px-1.5 py-0.5 rounded text-[#0a0a0a] border border-[#e4e4e7]">
+                <span className="font-mono text-xs bg-[#f4f4f5] px-1.5 py-0.5 rounded text-[var(--foreground)] border border-[var(--border)]">
                   EQUILIBRIUM_PHASES
                 </span>{' '}
                 simulates mineral precipitation by equilibrating the solution against a specified
@@ -50,8 +50,8 @@ export default function Slide06ScalingMass() {
               <p className="text-[0.6rem] font-bold uppercase tracking-[0.15em] text-[#14b8a6] mb-1">
                 Surface-normalized severity
               </p>
-              <h3 className="text-lg font-bold mb-2">Surface Loading</h3>
-              <p className="text-sm text-[#71717a] leading-relaxed mb-4 flex-1">
+              <h3 className="text-lg font-bold mb-2 text-[var(--foreground)]">Surface Loading</h3>
+              <p className="text-sm text-[var(--muted-foreground)] leading-relaxed mb-4 flex-1">
                 Raw scaling mass is normalized by the membrane active area to compute surface
                 loading, giving an area-independent severity metric in grams per square meter.
               </p>
@@ -67,10 +67,10 @@ export default function Slide06ScalingMass() {
 
         <FragmentReveal delay={0.35}>
           <div className="subtle-divider mb-5" />
-          <div className="glass-strong rounded-2xl border-l-4 border-l-[#5170ff] shadow-elevated px-8 py-5 flex items-start gap-4">
+          <div className="bg-[var(--card)] border border-[var(--border)] rounded-xl border-l-4 border-l-[#5170ff] px-8 py-5 flex items-start gap-4">
             <i className="fas fa-quote-left text-[#5170ff]/40 text-2xl mt-0.5 shrink-0" />
-            <p className="text-sm sm:text-base italic leading-relaxed text-[#3f3f46]">
-              <strong className="not-italic text-[#0a0a0a]">SI &gt; 0</strong> only tells you{' '}
+            <p className="text-sm sm:text-base italic leading-relaxed text-[var(--muted-foreground)]">
+              <strong className="not-italic text-[var(--foreground)]">SI &gt; 0</strong> only tells you{' '}
               <em>potential</em> to scale.{' '}
               <strong className="not-italic text-[#5170ff]">Scaling mass</strong> tells you{' '}
               <em>severity</em>.{' '}

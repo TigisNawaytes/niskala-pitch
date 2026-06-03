@@ -4,15 +4,18 @@ import CardPitch from '../components/CardPitch';
 
 export default function Slide09OneEngine() {
   return (
-    <div className="w-full h-full flex items-center justify-center px-8 sm:px-12 py-6 overflow-hidden relative dot-grid-brand">
-      <div className="pointer-events-none absolute -top-32 -left-32 w-[500px] h-[500px] rounded-full blur-3xl glow-blob-brand" />
-      <div className="pointer-events-none absolute -bottom-32 -right-32 w-[420px] h-[420px] rounded-full blur-3xl glow-blob-ct" />
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 pointer-events-none bg-hero-pattern" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-brand" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-fade" />
 
-      <div className="relative z-10 max-w-5xl w-full">
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 w-full py-6">
         <SectionLabel>Application</SectionLabel>
 
         <FragmentReveal>
-          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-8">
+          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-8 text-[var(--foreground)]">
             One <span className="stat-gradient">Engine</span>, Two Systems
           </h2>
         </FragmentReveal>
@@ -29,7 +32,7 @@ export default function Slide09OneEngine() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg text-niskala-brand">NiskalaRO</h3>
-                  <p className="text-[#71717a] text-xs">Reverse Osmosis</p>
+                  <p className="text-[var(--muted-foreground)] text-xs">Reverse Osmosis</p>
                 </div>
               </div>
               <ul className="space-y-2.5">
@@ -43,7 +46,7 @@ export default function Slide09OneEngine() {
                     <span className="text-[#5170ff] mt-1 shrink-0">
                       <i className="fas fa-chevron-right text-[0.55rem]" />
                     </span>
-                    <span className="text-[#0a0a0a]">{text}</span>
+                    <span className="text-[var(--foreground)]">{text}</span>
                   </li>
                 ))}
               </ul>
@@ -66,7 +69,7 @@ export default function Slide09OneEngine() {
                   }}
                 >
                   <span className="font-mono text-[0.6rem] font-bold text-[#a78bfa] tracking-widest uppercase block">PHREEQC</span>
-                  <span className="font-mono text-[0.55rem] text-[#71717a] tracking-wider block mt-0.5">Core</span>
+                  <span className="font-mono text-[0.55rem] text-[var(--muted-foreground)] tracking-wider block mt-0.5">Core</span>
                 </div>
               </div>
 
@@ -85,7 +88,7 @@ export default function Slide09OneEngine() {
                 </div>
                 <div>
                   <h3 className="font-bold text-lg text-niskala-ct">NiskalaCT</h3>
-                  <p className="text-[#71717a] text-xs">Cooling Tower</p>
+                  <p className="text-[var(--muted-foreground)] text-xs">Cooling Tower</p>
                 </div>
               </div>
               <ul className="space-y-2.5">
@@ -99,7 +102,7 @@ export default function Slide09OneEngine() {
                     <span className="text-[#14b8a6] mt-1 shrink-0">
                       <i className="fas fa-chevron-right text-[0.55rem]" />
                     </span>
-                    <span className="text-[#0a0a0a]">{text}</span>
+                    <span className="text-[var(--foreground)]">{text}</span>
                   </li>
                 ))}
               </ul>
@@ -110,7 +113,7 @@ export default function Slide09OneEngine() {
         <FragmentReveal delay={0.4}>
           <div className="flex justify-center">
             <span
-              className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-[0.68rem] font-medium text-[#71717a] glass"
+              className="inline-flex items-center gap-2 px-5 py-2 rounded-full text-[0.68rem] font-medium text-[var(--muted-foreground)] bg-[var(--card)] border border-[var(--border)]"
               style={{ borderColor: 'rgba(167,139,250,0.2)' }}
             >
               <i className="fas fa-info-circle text-[#a78bfa] text-[0.6rem]" />

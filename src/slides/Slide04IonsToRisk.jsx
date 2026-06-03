@@ -64,17 +64,17 @@ const siZones = [
 
 export default function Slide04IonsToRisk() {
   return (
-    <div className="w-full h-full flex items-center justify-center px-8 sm:px-12 py-6 overflow-hidden relative">
-      <div className="absolute inset-0 pointer-events-none dot-grid-brand" />
-      <div className="absolute -top-32 -right-32 w-[500px] h-[500px] rounded-full pointer-events-none glow-blob-brand" />
-      <div className="absolute -bottom-40 -left-40 w-[500px] h-[500px] rounded-full pointer-events-none glow-blob-violet" />
-      <div className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[600px] h-[300px] rounded-full pointer-events-none glow-blob-ct" />
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 pointer-events-none bg-hero-pattern" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-brand" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-fade" />
 
-      <div className="relative z-10 max-w-5xl w-full">
+      <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 w-full">
         <SectionLabel>Science</SectionLabel>
 
         <FragmentReveal>
-          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-8">
+          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-8 text-[var(--foreground)]">
             From Ions to <span className="stat-gradient">Scaling Risk</span>
           </h2>
         </FragmentReveal>
@@ -83,8 +83,8 @@ export default function Slide04IonsToRisk() {
           {pipelineSteps.map((step, i) => (
             <FragmentReveal key={step.label} delay={0.1 + i * 0.1} from="scale" className="flex items-center">
               <div
-                className={`flex flex-col items-center justify-center text-center px-5 py-4 bg-white border border-[#e4e4e7] rounded-xl border-b-4 ${step.border} min-w-[130px] flex-1 shadow-sm hover:shadow-md transition-shadow duration-300`}
-                style={{ borderBottomColor: step.color }}
+                className="flex flex-col items-center justify-center text-center px-5 py-4 bg-[var(--card)] border border-[var(--border)] rounded-xl min-w-[130px] flex-1 shadow-sm hover:shadow-md transition-shadow duration-300"
+                style={{ borderBottom: `4px solid ${step.color}` }}
               >
                 <p
                   className="font-mono text-base sm:text-lg font-bold leading-tight mb-1.5"
@@ -92,7 +92,7 @@ export default function Slide04IonsToRisk() {
                 >
                   {step.formula}
                 </p>
-                <p className="text-xs text-[#71717a]">{step.label}</p>
+                <p className="text-xs text-[var(--muted-foreground)]">{step.label}</p>
               </div>
               {i < pipelineSteps.length - 1 && (
                 <div className="flex items-center justify-center px-2 sm:px-3 shrink-0">
@@ -120,7 +120,7 @@ export default function Slide04IonsToRisk() {
                 <p className={`font-mono text-sm font-bold mb-1.5 ${zone.textColor}`}>
                   {zone.condition}
                 </p>
-                <p className="font-semibold text-sm mb-2.5">{zone.description}</p>
+                <p className="font-semibold text-sm mb-2.5 text-[var(--foreground)]">{zone.description}</p>
                 <span className={zone.badge}>
                   <i className={`${zone.badgeIcon} text-[0.5rem]`}></i> {zone.badgeText}
                 </span>

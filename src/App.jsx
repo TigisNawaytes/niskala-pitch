@@ -169,6 +169,14 @@ export default function App() {
                 </span>
               </button>
 
+              <button
+                onClick={closeCover}
+                className="w-8 h-8 rounded-full bg-white border border-[#e4e4e7] flex items-center justify-center text-[#71717a] text-xs hover:border-[#5170ff]/40 hover:text-[#5170ff] transition-all duration-200"
+                title="Home / Back to cover"
+              >
+                <i className="fas fa-home" />
+              </button>
+
               <div className="h-5 w-px bg-[#e4e4e7] mx-1 hidden sm:block" />
 
               <span className="font-mono text-[0.65rem] font-bold text-[#0a0a0a] tracking-widest tabular-nums">

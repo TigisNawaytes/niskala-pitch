@@ -80,15 +80,18 @@ const cocChartOption = {
 
 export default function Slide11NiskalaCT() {
   return (
-    <div className="w-full h-full flex items-center justify-center px-8 sm:px-12 py-6 overflow-hidden relative dot-grid-brand">
-      <div className="pointer-events-none absolute -top-28 -left-28 w-[420px] h-[420px] rounded-full blur-3xl glow-blob-ct" />
-      <div className="pointer-events-none absolute -bottom-20 -right-20 w-[360px] h-[360px] rounded-full blur-3xl glow-blob-brand" />
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 pointer-events-none bg-hero-pattern" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-brand" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-fade" />
 
-      <div className="relative z-10 max-w-5xl w-full">
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 w-full py-6">
         <SectionLabel color="#14b8a6">NiskalaCT</SectionLabel>
 
         <FragmentReveal>
-          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-6">
+          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-6 text-[var(--foreground)]">
             Cooling Tower{' '}
             <span className="text-niskala-ct">Well-Mixed Model</span>
           </h2>
@@ -100,7 +103,7 @@ export default function Slide11NiskalaCT() {
           <div className="flex flex-col gap-4">
             <FragmentReveal delay={0.1} from="left">
               <CardPitch accentColor="#14b8a6">
-                <h3 className="font-bold text-base mb-4">Water Balance</h3>
+                <h3 className="font-bold text-base mb-4 text-[var(--foreground)]">Water Balance</h3>
 
                 <div className="flex items-center gap-2 font-mono mb-4 flex-wrap">
                   <div className="flex flex-col items-center gap-1">
@@ -110,10 +113,10 @@ export default function Slide11NiskalaCT() {
                     >
                       MU
                     </span>
-                    <span className="text-[0.5rem] text-[#71717a] font-sans">Make-up</span>
+                    <span className="text-[0.5rem] text-[var(--muted-foreground)] font-sans">Make-up</span>
                   </div>
 
-                  <span className="text-[#71717a] text-lg font-bold self-start mt-2">=</span>
+                  <span className="text-[var(--muted-foreground)] text-lg font-bold self-start mt-2">=</span>
 
                   <div className="flex flex-col items-center gap-1">
                     <span
@@ -122,10 +125,10 @@ export default function Slide11NiskalaCT() {
                     >
                       Evap
                     </span>
-                    <span className="text-[0.5rem] text-[#71717a] font-sans">Evaporation</span>
+                    <span className="text-[0.5rem] text-[var(--muted-foreground)] font-sans">Evaporation</span>
                   </div>
 
-                  <span className="text-[#71717a] text-lg font-bold self-start mt-2">+</span>
+                  <span className="text-[var(--muted-foreground)] text-lg font-bold self-start mt-2">+</span>
 
                   <div className="flex flex-col items-center gap-1">
                     <span
@@ -134,10 +137,10 @@ export default function Slide11NiskalaCT() {
                     >
                       BD
                     </span>
-                    <span className="text-[0.5rem] text-[#71717a] font-sans">Blowdown</span>
+                    <span className="text-[0.5rem] text-[var(--muted-foreground)] font-sans">Blowdown</span>
                   </div>
 
-                  <span className="text-[#71717a] text-lg font-bold self-start mt-2">+</span>
+                  <span className="text-[var(--muted-foreground)] text-lg font-bold self-start mt-2">+</span>
 
                   <div className="flex flex-col items-center gap-1">
                     <span
@@ -146,11 +149,11 @@ export default function Slide11NiskalaCT() {
                     >
                       Drift
                     </span>
-                    <span className="text-[0.5rem] text-[#71717a] font-sans">Drift loss</span>
+                    <span className="text-[0.5rem] text-[var(--muted-foreground)] font-sans">Drift loss</span>
                   </div>
                 </div>
 
-                <p className="text-[#71717a] text-sm leading-relaxed">
+                <p className="text-[var(--muted-foreground)] text-sm leading-relaxed">
                   COC = MU / BD — cycles of concentration drive ion buildup
                 </p>
               </CardPitch>
@@ -158,7 +161,7 @@ export default function Slide11NiskalaCT() {
 
             <FragmentReveal delay={0.2} from="left">
               <CardPitch>
-                <h3 className="font-bold text-base mb-4">Supply &rarr; Return Temperature Effect</h3>
+                <h3 className="font-bold text-base mb-4 text-[var(--foreground)]">Supply &rarr; Return Temperature Effect</h3>
 
                 <div className="flex items-center gap-2 mb-4">
                   <span
@@ -190,7 +193,7 @@ export default function Slide11NiskalaCT() {
                   </span>
                 </div>
 
-                <p className="text-[#71717a] text-sm leading-relaxed">
+                <p className="text-[var(--muted-foreground)] text-sm leading-relaxed">
                   Higher return temperature reduces t<sub>ind</sub> — scaling risk increases at heat exchanger
                 </p>
               </CardPitch>
@@ -199,7 +202,7 @@ export default function Slide11NiskalaCT() {
 
           <FragmentReveal delay={0.15} from="right">
             <CardPitch className="h-full">
-              <h3 className="font-bold text-base mb-3">COC Sensitivity Scan</h3>
+              <h3 className="font-bold text-base mb-3 text-[var(--foreground)]">COC Sensitivity Scan</h3>
               <div className="chart-box" style={{ height: 260 }}>
                 <ReactECharts
                   option={cocChartOption}
@@ -207,13 +210,13 @@ export default function Slide11NiskalaCT() {
                   opts={{ renderer: 'svg' }}
                 />
               </div>
-              <p className="text-[#71717a] text-xs mt-3 leading-relaxed">
+              <p className="text-[var(--muted-foreground)] text-xs mt-3 leading-relaxed">
                 COC 1 → 10: mineral SI increases non-linearly. Red zone = unsafe.
               </p>
               <div className="subtle-divider my-3" />
               <div className="flex items-center gap-2">
                 <i className="fas fa-shield-alt text-[#10b981] text-[0.7rem]" />
-                <span className="text-[0.65rem] text-[#71717a]">
+                <span className="text-[0.65rem] text-[var(--muted-foreground)]">
                   <span className="font-semibold text-[#10b981]">Maximum safe COC</span> found where all SI lines cross the dotted threshold
                 </span>
               </div>

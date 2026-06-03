@@ -1,26 +1,27 @@
-export default function CardPitch({ children, className = '', accentColor, variant = 'default' }) {
-  const elevatedStyle = variant === 'elevated'
-    ? {
-        boxShadow: accentColor
-          ? `0 8px 32px -8px ${accentColor}18, 0 2px 8px -4px rgba(0,0,0,0.04)`
-          : '0 8px 32px -8px rgba(0,0,0,0.08), 0 2px 8px -4px rgba(0,0,0,0.03)',
-      }
-    : {};
-
-  const hoverStyle = accentColor
-    ? { '--card-accent': accentColor }
-    : {};
-
+export default function CardPitch({ children, className = '', accentColor, title, subtitle, headerRight }) {
+  const shadowColor = accentColor || 'rgba(81,112,255,0.08)';
+  const borderColor = accentColor ? accentColor.replace(')', ',0.10)').replace('rgb', 'rgba') : 'rgba(81,112,255,0.10)';
+  
   return (
     <div
-      className={`card-pitch ${className}`}
-      style={{
-        ...(accentColor ? { borderLeft: `3px solid ${accentColor}` } : {}),
-        ...elevatedStyle,
-        ...hoverStyle,
-      }}
+      className={`relative rounded-xl p-px overflow-hidden h-full ${className}`}
+      style={{ boxShadow: `0 0 0 1px ${borderColor}, 0 4px 16px -4px ${shadowColor}` }}
     >
-      {children}
+      <div className="relative bg-[var(--card)] rounded-xl text-left overflow-hidden h-full flex flex-col">
+        {(title || headerRight) && (
+          <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[var(--border)] bg-[var(--muted)] flex-shrink-0">
+            {title && (
+              <span className="text-[11px] font-mono text-[var(--muted-foreground)]">{title}</span>
+            )}
+            {headerRight && (
+              <div className="ml-auto">{headerRight}</div>
+            )}
+          </div>
+        )}
+        <div className="relative p-5 sm:p-6 flex-1">
+          {children}
+        </div>
+      </div>
     </div>
   );
 }

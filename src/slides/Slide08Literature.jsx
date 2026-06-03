@@ -18,14 +18,14 @@ function SubPageNav({ current, total, onPrev, onNext }) {
       <button
         onClick={onPrev}
         disabled={current === 0}
-        className="w-9 h-9 flex items-center justify-center rounded-full border border-[#e4e4e7]
-          text-[#71717a] hover:text-[#0a0a0a] hover:border-[#5170ff] hover:bg-white
+        className="w-9 h-9 flex items-center justify-center rounded-full border border-[var(--border)]
+          text-[var(--muted-foreground)] hover:text-[var(--foreground)] hover:border-[#5170ff] hover:bg-[var(--card)]
           transition-all duration-200 disabled:opacity-30 disabled:pointer-events-none"
       >
         <i className="fas fa-chevron-left text-xs" />
       </button>
 
-      <span className="text-[0.7rem] font-mono text-[#71717a] tabular-nums min-w-[2.5rem] text-center">
+      <span className="text-[0.7rem] font-mono text-[var(--muted-foreground)] tabular-nums min-w-[2.5rem] text-center">
         {current + 1} / {total}
       </span>
 
@@ -41,8 +41,8 @@ function SubPageNav({ current, total, onPrev, onNext }) {
       <button
         onClick={onNext}
         disabled={current === total - 1}
-        className="w-9 h-9 flex items-center justify-center rounded-full border border-[#e4e4e7]
-          text-[#71717a] hover:text-[#0a0a0a] hover:border-[#5170ff] hover:bg-white
+        className="w-9 h-9 flex items-center justify-center rounded-full border border-[var(--border)]
+          text-[var(--muted-foreground)] hover:text-[var(--foreground)] hover:border-[#5170ff] hover:bg-[var(--card)]
           transition-all duration-200 disabled:opacity-30 disabled:pointer-events-none"
       >
         <i className="fas fa-chevron-right text-xs" />
@@ -83,19 +83,22 @@ export default function Slide08Literature() {
   }, [page]);
 
   return (
-    <div className="w-full h-full flex items-center justify-center px-8 sm:px-12 py-6 overflow-hidden relative dot-grid-brand">
-      <div className="pointer-events-none absolute -top-24 -right-24 w-[400px] h-[400px] rounded-full blur-3xl glow-blob-violet" />
-      <div className="pointer-events-none absolute -bottom-28 -left-28 w-[360px] h-[360px] rounded-full blur-3xl glow-blob-brand" />
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 pointer-events-none bg-hero-pattern" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-brand" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-fade" />
 
-      <div className="relative z-10 max-w-5xl w-full h-full flex flex-col">
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 w-full h-full flex flex-col py-6">
         <div className="flex-shrink-0">
           <SectionLabel>Literature Foundation</SectionLabel>
           <FragmentReveal>
-            <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-2">
+            <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-2 text-[var(--foreground)]">
               From <span className="stat-gradient">Literature</span> to Engine
             </h2>
           </FragmentReveal>
-          <p className="text-[#71717a] text-sm sm:text-base mb-5 font-light">
+          <p className="text-[var(--muted-foreground)] text-sm sm:text-base mb-5 font-light">
             Every parameter in Niskala traces to peer-reviewed science.
           </p>
 
@@ -132,13 +135,13 @@ export default function Slide08Literature() {
               <FragmentReveal delay={0} from="scale">
                 <CardPitch accentColor="#a78bfa">
                   <SectionLabel color="#a78bfa">Primary Model</SectionLabel>
-                  <p className="text-[0.9rem] font-semibold text-[#0a0a0a] mb-1">Dai et al. (2021)</p>
-                  <p className="text-[0.72rem] text-[#71717a] mb-2 italic">MSDI platform</p>
+                  <p className="text-[0.9rem] font-semibold text-[var(--foreground)] mb-1">Dai et al. (2021)</p>
+                  <p className="text-[0.72rem] text-[var(--muted-foreground)] mb-2 italic">MSDI platform</p>
                   <div className="flex items-center gap-1.5 mb-2">
                     <i className="fas fa-journal-whills text-[#a78bfa] text-[0.6rem]" />
                     <span className="font-mono text-[0.62rem] text-[#a78bfa] font-semibold">Desalination</span>
                   </div>
-                  <div className="flex items-start gap-2 text-[0.78rem] text-[#71717a]">
+                  <div className="flex items-start gap-2 text-[0.78rem] text-[var(--muted-foreground)]">
                     <i className="fas fa-arrow-right text-[#a78bfa] mt-0.5 text-[0.55rem]" />
                     <span>N-CNT model, MSDI platform, Langmuir adsorption</span>
                   </div>
@@ -148,13 +151,13 @@ export default function Slide08Literature() {
               <FragmentReveal delay={0.08} from="scale">
                 <CardPitch accentColor="#5170ff">
                   <SectionLabel color="#5170ff">Dose-Response Data</SectionLabel>
-                  <p className="text-[0.9rem] font-semibold text-[#0a0a0a] mb-1">Ahmed et al. (2024)</p>
-                  <p className="text-[0.72rem] text-[#71717a] mb-2 italic">J. Saudi Chem. Soc.</p>
+                  <p className="text-[0.9rem] font-semibold text-[var(--foreground)] mb-1">Ahmed et al. (2024)</p>
+                  <p className="text-[0.72rem] text-[var(--muted-foreground)] mb-2 italic">J. Saudi Chem. Soc.</p>
                   <div className="flex items-center gap-1.5 mb-2">
                     <i className="fas fa-fingerprint text-[#5170ff] text-[0.6rem]" />
                     <span className="font-mono text-[0.62rem] text-[#5170ff] font-semibold">28:101923</span>
                   </div>
-                  <div className="flex items-start gap-2 text-[0.78rem] text-[#71717a]">
+                  <div className="flex items-start gap-2 text-[0.78rem] text-[var(--muted-foreground)]">
                     <i className="fas fa-arrow-right text-[#5170ff] mt-0.5 text-[0.55rem]" />
                     <span>70+ data points for empirical dose-response calibration</span>
                   </div>
@@ -164,13 +167,13 @@ export default function Slide08Literature() {
               <FragmentReveal delay={0.16} from="scale">
                 <CardPitch accentColor="#14b8a6">
                   <SectionLabel color="#14b8a6">Deposit Reference</SectionLabel>
-                  <p className="text-[0.9rem] font-semibold text-[#0a0a0a] mb-1">Amjad (2022)</p>
-                  <p className="text-[0.72rem] text-[#71717a] mb-2 italic">Formed Deposits</p>
+                  <p className="text-[0.9rem] font-semibold text-[var(--foreground)] mb-1">Amjad (2022)</p>
+                  <p className="text-[0.72rem] text-[var(--muted-foreground)] mb-2 italic">Formed Deposits</p>
                   <div className="flex items-center gap-1.5 mb-2">
                     <i className="fas fa-book text-[#14b8a6] text-[0.6rem]" />
                     <span className="font-mono text-[0.62rem] text-[#14b8a6] font-semibold">Elsevier</span>
                   </div>
-                  <div className="flex items-start gap-2 text-[0.78rem] text-[#71717a]">
+                  <div className="flex items-start gap-2 text-[0.78rem] text-[var(--muted-foreground)]">
                     <i className="fas fa-arrow-right text-[#14b8a6] mt-0.5 text-[0.55rem]" />
                     <span>Mineral morphology, inhibitor mechanisms, threshold effects</span>
                   </div>
@@ -180,13 +183,13 @@ export default function Slide08Literature() {
               <FragmentReveal delay={0.24} from="scale">
                 <CardPitch accentColor="#a78bfa">
                   <SectionLabel color="#a78bfa">Geochemistry</SectionLabel>
-                  <p className="text-[0.9rem] font-semibold text-[#0a0a0a] mb-1">Appelo &amp; Postma</p>
-                  <p className="text-[0.72rem] text-[#71717a] mb-2 italic">Geochemistry, Groundwater and Pollution</p>
+                  <p className="text-[0.9rem] font-semibold text-[var(--foreground)] mb-1">Appelo &amp; Postma</p>
+                  <p className="text-[0.72rem] text-[var(--muted-foreground)] mb-2 italic">Geochemistry, Groundwater and Pollution</p>
                   <div className="flex items-center gap-1.5 mb-2">
                     <i className="fas fa-book text-[#a78bfa] text-[0.6rem]" />
                     <span className="font-mono text-[0.62rem] text-[#a78bfa] font-semibold">Balkema</span>
                   </div>
-                  <div className="flex items-start gap-2 text-[0.78rem] text-[#71717a]">
+                  <div className="flex items-start gap-2 text-[0.78rem] text-[var(--muted-foreground)]">
                     <i className="fas fa-arrow-right text-[#a78bfa] mt-0.5 text-[0.55rem]" />
                     <span>Activity models, Pitzer equations, Davies, ion speciation</span>
                   </div>
@@ -197,11 +200,11 @@ export default function Slide08Literature() {
 
           <div className="min-w-full snap-start flex-shrink-0 flex flex-col justify-center">
             <div
-              className="rounded-xl mb-5 px-5 py-3.5 flex items-center gap-3 glass"
+              className="rounded-xl mb-5 px-5 py-3.5 flex items-center gap-3 bg-[var(--card)] border border-[var(--border)]"
               style={{ borderLeft: `3px solid ${pageAccents[1]}` }}
             >
               <i className="fas fa-flask" style={{ color: pageAccents[1], fontSize: '0.85rem' }} />
-              <h3 className="text-[1.15rem] font-bold tracking-tight">
+              <h3 className="text-[1.15rem] font-bold tracking-tight text-[var(--foreground)]">
                 Dai et al. (2021) — MSDI Platform
               </h3>
             </div>
@@ -211,7 +214,7 @@ export default function Slide08Literature() {
                   <i className="fas fa-flask text-[#a78bfa] text-xs" />
                   <span className="text-[0.7rem] font-bold tracking-[0.15em] uppercase text-[#a78bfa]">What They Built</span>
                 </div>
-                <ul className="space-y-2.5 text-[0.82rem] text-[#0a0a0a]">
+                <ul className="space-y-2.5 text-[0.82rem] text-[var(--foreground)]">
                   {[
                     'SSP thermodynamics for mineral solubility prediction',
                     'N-CNT (Nucleation-Crystal Nucleation Theory) kinetics',
@@ -232,7 +235,7 @@ export default function Slide08Literature() {
                   <i className="fas fa-code-branch text-[#5170ff] text-xs" />
                   <span className="text-[0.7rem] font-bold tracking-[0.15em] uppercase text-[#5170ff]">What We Derived</span>
                 </div>
-                <ul className="space-y-2.5 text-[0.82rem] text-[#0a0a0a]">
+                <ul className="space-y-2.5 text-[0.82rem] text-[var(--foreground)]">
                   {[
                     'N-CNT kinetic engine calibrated to 12 inhibitor families',
                     'Langmuir isotherm parameters for competitive adsorption',
@@ -252,11 +255,11 @@ export default function Slide08Literature() {
 
           <div className="min-w-full snap-start flex-shrink-0 flex flex-col justify-center">
             <div
-              className="rounded-xl mb-5 px-5 py-3.5 flex items-center gap-3 glass"
+              className="rounded-xl mb-5 px-5 py-3.5 flex items-center gap-3 bg-[var(--card)] border border-[var(--border)]"
               style={{ borderLeft: `3px solid ${pageAccents[2]}` }}
             >
               <i className="fas fa-table" style={{ color: pageAccents[2], fontSize: '0.85rem' }} />
-              <h3 className="text-[1.15rem] font-bold tracking-tight">
+              <h3 className="text-[1.15rem] font-bold tracking-tight text-[var(--foreground)]">
                 Ahmed et al. (2024) — Dose-Response Data
               </h3>
             </div>
@@ -266,7 +269,7 @@ export default function Slide08Literature() {
                   <i className="fas fa-table text-[#5170ff] text-xs" />
                   <span className="text-[0.7rem] font-bold tracking-[0.15em] uppercase text-[#5170ff]">Experimental Campaign</span>
                 </div>
-                <ul className="space-y-2.5 text-[0.82rem] text-[#0a0a0a]">
+                <ul className="space-y-2.5 text-[0.82rem] text-[var(--foreground)]">
                   {[
                     '70+ dose-response data points across inhibitor types',
                     'Controlled RO membrane fouling experiments',
@@ -286,7 +289,7 @@ export default function Slide08Literature() {
                   <i className="fas fa-chart-line text-[#14b8a6] text-xs" />
                   <span className="text-[0.7rem] font-bold tracking-[0.15em] uppercase text-[#14b8a6]">Engine Integration</span>
                 </div>
-                <ul className="space-y-2.5 text-[0.82rem] text-[#0a0a0a]">
+                <ul className="space-y-2.5 text-[0.82rem] text-[var(--foreground)]">
                   {[
                     'Empirical dose-response → calibrated inhibition curves',
                     'Non-linear regression for EC50 / EC90 threshold estimation',
@@ -305,20 +308,20 @@ export default function Slide08Literature() {
 
           <div className="min-w-full snap-start flex-shrink-0 flex flex-col justify-center">
             <div
-              className="rounded-xl mb-5 px-5 py-3.5 flex items-center gap-3 glass"
+              className="rounded-xl mb-5 px-5 py-3.5 flex items-center gap-3 bg-[var(--card)] border border-[var(--border)]"
               style={{ borderLeft: `3px solid ${pageAccents[3]}` }}
             >
               <i className="fas fa-book-open" style={{ color: pageAccents[3], fontSize: '0.85rem' }} />
-              <h3 className="text-[1.15rem] font-bold tracking-tight">
+              <h3 className="text-[1.15rem] font-bold tracking-tight text-[var(--foreground)]">
                 Foundational References
               </h3>
             </div>
             <div className="grid md:grid-cols-2 gap-5">
               <CardPitch accentColor="#14b8a6">
                 <SectionLabel color="#14b8a6">Deposit Reference</SectionLabel>
-                <p className="text-[0.9rem] font-semibold text-[#0a0a0a] mb-2">Amjad (2022)</p>
-                <p className="text-[0.72rem] text-[#71717a] mb-3 italic">Formed Deposits, Elsevier</p>
-                <ul className="space-y-2.5 text-[0.82rem] text-[#0a0a0a]">
+                <p className="text-[0.9rem] font-semibold text-[var(--foreground)] mb-2">Amjad (2022)</p>
+                <p className="text-[0.72rem] text-[var(--muted-foreground)] mb-3 italic">Formed Deposits, Elsevier</p>
+                <ul className="space-y-2.5 text-[0.82rem] text-[var(--foreground)]">
                   {[
                     'Comprehensive mineral morphology classification',
                     'Inhibitor mechanisms: threshold, dispersion, crystal modification',
@@ -335,9 +338,9 @@ export default function Slide08Literature() {
 
               <CardPitch accentColor="#a78bfa">
                 <SectionLabel color="#a78bfa">Geochemistry</SectionLabel>
-                <p className="text-[0.9rem] font-semibold text-[#0a0a0a] mb-2">Appelo &amp; Postma</p>
-                <p className="text-[0.72rem] text-[#71717a] mb-3 italic">Geochemistry, Groundwater and Pollution, Balkema</p>
-                <ul className="space-y-2.5 text-[0.82rem] text-[#0a0a0a]">
+                <p className="text-[0.9rem] font-semibold text-[var(--foreground)] mb-2">Appelo &amp; Postma</p>
+                <p className="text-[0.72rem] text-[var(--muted-foreground)] mb-3 italic">Geochemistry, Groundwater and Pollution, Balkema</p>
+                <ul className="space-y-2.5 text-[0.82rem] text-[var(--foreground)]">
                   {[
                     'Pitzer specific-ion interaction equations for high TDS',
                     'Davies and Debye-Hueckel activity models for low TDS',

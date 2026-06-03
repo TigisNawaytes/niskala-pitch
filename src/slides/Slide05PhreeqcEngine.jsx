@@ -43,16 +43,17 @@ const ionSpecies = [
 
 export default function Slide05PhreeqcEngine() {
   return (
-    <div className="w-full h-full flex items-center justify-center px-8 sm:px-12 py-6 overflow-hidden relative">
-      <div className="absolute inset-0 pointer-events-none dot-grid" />
-      <div className="absolute -top-24 -right-24 w-[420px] h-[420px] rounded-full pointer-events-none glow-blob-brand" />
-      <div className="absolute -bottom-32 -left-32 w-[380px] h-[380px] rounded-full pointer-events-none glow-blob-ct" />
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 pointer-events-none bg-hero-pattern" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-brand" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-fade" />
 
-      <div className="relative z-10 max-w-5xl w-full">
+      <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 w-full">
         <SectionLabel>Engine</SectionLabel>
 
         <FragmentReveal>
-          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-8">
+          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-8 text-[var(--foreground)]">
             PHREEQC <span className="stat-gradient">Thermodynamic Core</span>
           </h2>
         </FragmentReveal>
@@ -61,7 +62,7 @@ export default function Slide05PhreeqcEngine() {
           <div className="flex flex-col gap-4">
             <FragmentReveal delay={0.1} from="left">
               <CardPitch>
-                <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
+                <h3 className="text-lg font-bold mb-3 flex items-center gap-2 text-[var(--foreground)]">
                   <i className="fas fa-sliders-h text-niskala-brand" /> Input
                 </h3>
                 <div className="flex flex-wrap gap-1.5 mb-3">
@@ -79,21 +80,21 @@ export default function Slide05PhreeqcEngine() {
                     </span>
                   ))}
                 </div>
-                <p className="text-[0.65rem] text-[#71717a] mb-2 font-medium tracking-wide uppercase">
+                <p className="text-[0.65rem] text-[var(--muted-foreground)] mb-2 font-medium tracking-wide uppercase">
                   + required parameters
                 </p>
                 <div className="space-y-1.5 text-xs">
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-sm bg-[#5170ff] shrink-0" />
-                    <span><strong>pH / Temperature</strong></span>
+                    <span className="text-[var(--foreground)]"><strong>pH / Temperature</strong></span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-sm bg-[#5170ff] shrink-0" />
-                    <span><strong>Alkalinity</strong> (as CaCO₃)</span>
+                    <span className="text-[var(--foreground)]"><strong>Alkalinity</strong> (as CaCO₃)</span>
                   </div>
                   <div className="flex items-center gap-2">
                     <span className="w-1.5 h-1.5 rounded-sm bg-[#a78bfa] shrink-0" />
-                    <span><strong>PO₄</strong> <span className="text-[#71717a]">(optional)</span></span>
+                    <span className="text-[var(--foreground)]"><strong>PO₄</strong> <span className="text-[var(--muted-foreground)]">(optional)</span></span>
                   </div>
                 </div>
               </CardPitch>
@@ -101,7 +102,7 @@ export default function Slide05PhreeqcEngine() {
 
             <FragmentReveal delay={0.2} from="left">
               <CardPitch accentColor="#5170ff">
-                <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
+                <h3 className="text-lg font-bold mb-3 flex items-center gap-2 text-[var(--foreground)]">
                   <i className="fas fa-database text-niskala-brand" /> Database Selection
                 </h3>
                 <div className="space-y-3">
@@ -110,9 +111,9 @@ export default function Slide05PhreeqcEngine() {
                       <code className="font-mono text-niskala-brand font-bold text-xs bg-[#5170ff]/[0.1] px-2 py-0.5 rounded">
                         pitzer.dat
                       </code>
-                      <span className="text-[#71717a] text-xs">TDS &gt; 10,000 mg/L</span>
+                      <span className="text-[var(--muted-foreground)] text-xs">TDS &gt; 10,000 mg/L</span>
                     </div>
-                    <p className="text-[#71717a] text-xs leading-snug pl-1">
+                    <p className="text-[var(--muted-foreground)] text-xs leading-snug pl-1">
                       SWRO, seawater CT coastal plants
                     </p>
                   </div>
@@ -121,9 +122,9 @@ export default function Slide05PhreeqcEngine() {
                       <code className="font-mono text-niskala-ct font-bold text-xs bg-[#14b8a6]/[0.1] px-2 py-0.5 rounded">
                         phreeqc.dat
                       </code>
-                      <span className="text-[#71717a] text-xs">TDS ≤ 10,000 mg/L</span>
+                      <span className="text-[var(--muted-foreground)] text-xs">TDS ≤ 10,000 mg/L</span>
                     </div>
-                    <p className="text-[#71717a] text-xs leading-snug pl-1">
+                    <p className="text-[var(--muted-foreground)] text-xs leading-snug pl-1">
                       BWRO, freshwater CT, Davies
                     </p>
                   </div>
@@ -134,7 +135,7 @@ export default function Slide05PhreeqcEngine() {
 
           <FragmentReveal delay={0.15}>
             <div>
-              <p className="section-label text-[#71717a] mb-3">
+              <p className="section-label text-[var(--muted-foreground)] mb-3">
                 7 Supported Minerals
               </p>
               <div className="grid grid-cols-2 sm:grid-cols-3 gap-2">
@@ -144,12 +145,10 @@ export default function Slide05PhreeqcEngine() {
                   return (
                     <div
                       key={m.name}
-                      className={`rounded-xl p-3 border transition-shadow hover:shadow-sm ${m.violet ? 'col-span-2 sm:col-span-1' : ''}`}
+                      className={`rounded-xl p-3 border border-[var(--border)] bg-[var(--card)] transition-shadow hover:shadow-sm ${m.violet ? 'col-span-2 sm:col-span-1' : ''}`}
                       style={{
-                        borderColor: `${tint.border}33`,
                         borderLeftColor: tint.border,
                         borderLeftWidth: '3px',
-                        backgroundColor: tint.bg,
                       }}
                     >
                       <div
@@ -158,10 +157,10 @@ export default function Slide05PhreeqcEngine() {
                       >
                         {m.formula}
                       </div>
-                      <div className="text-xs font-semibold text-[#0a0a0a] mt-1">{m.name}</div>
+                      <div className="text-xs font-semibold text-[var(--foreground)] mt-1">{m.name}</div>
                       <div className="flex items-center justify-between mt-1.5">
-                        <span className="text-xs text-[#71717a]">
-                          SI <span className="font-mono font-semibold text-[#0a0a0a]">{m.si}</span>
+                        <span className="text-xs text-[var(--muted-foreground)]">
+                          SI <span className="font-mono font-semibold text-[var(--foreground)]">{m.si}</span>
                         </span>
                         <span
                           className="text-[0.6rem] font-bold px-1.5 py-0.5 rounded-full"

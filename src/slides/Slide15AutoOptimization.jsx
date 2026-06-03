@@ -8,10 +8,10 @@ const strategies = [
     accent: '#5170ff',
     icon: 'fa-tint',
     title: 'pH-Only (Acid Dosing)',
-    text: 'Lower pH shifts carbonate equilibrium \u2192 HCO\u2083\u207b favored over CO\u2083\u00b2\u207b. Binary search finds minimum pH. H\u2082SO\u2084 dose from alkalinity + CO\u2082 equilibrium.',
+    text: 'Lower pH shifts carbonate equilibrium → HCO₃⁻ favored over CO₃²⁻. Binary search finds minimum pH. H₂SO₄ dose from alkalinity + CO₂ equilibrium.',
     tags: [
       { type: 'safe', label: 'pH 7.1' },
-      { type: 'muted', label: '87 mg/L H\u2082SO\u2084' },
+      { type: 'muted', label: '87 mg/L H₂SO₄' },
     ],
   },
   {
@@ -33,7 +33,7 @@ const strategies = [
     text: 'Combines pH adjustment + reduced inhibitor dose. Cost-optimized: balances acid vs inhibitor cost.',
     tags: [
       { type: 'safe', label: 'pH 7.5 + 1.1 ppm' },
-      { type: 'green', label: 'OPEX \u221232%' },
+      { type: 'green', label: 'OPEX −32%' },
     ],
   },
   {
@@ -41,9 +41,9 @@ const strategies = [
     accent: '#f59e0b',
     icon: 'fa-arrow-down',
     title: 'COC Reduction',
-    text: 'Last resort \u2014 reduce cycles of concentration. Binary search finds max safe COC.',
+    text: 'Last resort — reduce cycles of concentration. Binary search finds max safe COC.',
     tags: [
-      { type: 'warning', label: 'COC 8 \u2192 6' },
+      { type: 'warning', label: 'COC 8 → 6' },
       { type: 'muted', label: 'BD +33%' },
     ],
   },
@@ -51,15 +51,18 @@ const strategies = [
 
 export default function Slide15AutoOptimization() {
   return (
-    <div className="w-full h-full flex items-center justify-center px-8 sm:px-12 py-6 overflow-hidden relative dot-grid-brand">
-      <div className="absolute -top-24 -left-24 w-96 h-96 rounded-full pointer-events-none glow-blob-brand" />
-      <div className="absolute -bottom-24 -right-24 w-80 h-80 rounded-full pointer-events-none glow-blob-violet" />
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 pointer-events-none bg-hero-pattern" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-brand" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-fade" />
 
-      <div className="relative z-10 max-w-5xl w-full">
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 w-full">
         <SectionLabel>Optimization</SectionLabel>
 
         <FragmentReveal>
-          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-6">
+          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-6 text-[var(--foreground)]">
             4-Strategy <span className="stat-gradient">Auto-Optimization</span>
           </h2>
         </FragmentReveal>
@@ -85,11 +88,11 @@ export default function Slide15AutoOptimization() {
                   <div className="flex-1 min-w-0">
                     <div className="flex items-center gap-2 mb-1.5">
                       <i className={`fas ${s.icon} text-xs`} style={{ color: s.accent }} />
-                      <h3 className="text-base sm:text-lg font-bold leading-snug">
+                      <h3 className="text-base sm:text-lg font-bold leading-snug text-[var(--foreground)]">
                         {s.title}
                       </h3>
                     </div>
-                    <p className="text-sm text-[#71717a] leading-relaxed mb-3">
+                    <p className="text-sm text-[var(--muted-foreground)] leading-relaxed mb-3">
                       {s.text}
                     </p>
                     <div className="flex flex-wrap gap-2 items-center">
@@ -121,7 +124,7 @@ export default function Slide15AutoOptimization() {
                         return (
                           <span
                             key={j}
-                            className="font-mono text-xs text-[#71717a] px-2.5 py-1 rounded-full bg-[#f4f4f5] border border-[#e4e4e7]"
+                            className="font-mono text-xs text-[var(--muted-foreground)] px-2.5 py-1 rounded-full bg-[var(--card)] border border-[var(--border)]"
                           >
                             {tag.label}
                           </span>
@@ -137,7 +140,7 @@ export default function Slide15AutoOptimization() {
 
         <FragmentReveal delay={0.6}>
           <div className="subtle-divider mt-6 mb-4" />
-          <p className="text-sm italic text-[#71717a] text-center leading-relaxed">
+          <p className="text-sm italic text-[var(--muted-foreground)] text-center leading-relaxed">
             All strategies verified with kinetic scaling risk simulation before deployment.
           </p>
         </FragmentReveal>

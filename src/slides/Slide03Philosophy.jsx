@@ -31,17 +31,18 @@ const philosophyCards = [
 
 export default function Slide03Philosophy() {
   return (
-    <div className="w-full h-full flex items-center justify-center px-8 sm:px-12 py-6 overflow-hidden relative bg-niskala-brand/[0.02]">
-      <div className="absolute top-0 right-0 w-[500px] h-[500px] pointer-events-none glow-blob-brand" />
-      <div className="absolute bottom-0 left-0 w-[400px] h-[400px] pointer-events-none glow-blob-ct" />
-      <div className="absolute inset-0 pointer-events-none dot-grid-brand" />
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 pointer-events-none bg-hero-pattern" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-brand" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-fade" />
 
-      <div className="relative z-10 max-w-5xl w-full">
+      <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 w-full">
         <SectionLabel>Philosophy</SectionLabel>
 
         <FragmentReveal delay={0}>
           <h2
-            className="font-black tracking-tight leading-[1.1] mb-8"
+            className="font-black tracking-tight leading-[1.1] mb-8 text-[var(--foreground)]"
             style={{ fontSize: 'clamp(2rem, 4vw, 3.2rem)' }}
           >
             <span className="stat-gradient">Understand the Process.</span>
@@ -51,7 +52,7 @@ export default function Slide03Philosophy() {
         </FragmentReveal>
 
         <FragmentReveal delay={0.1}>
-          <p className="text-[#71717a] text-base sm:text-lg max-w-3xl mb-6 leading-relaxed">
+          <p className="text-[var(--muted-foreground)] text-base sm:text-lg max-w-3xl mb-6 leading-relaxed">
             Niskala is an open-engine platform. Every calculation — from ionic
             concentration to risk assessment — is traceable, explainable, and
             grounded in peer-reviewed science.
@@ -65,7 +66,7 @@ export default function Slide03Philosophy() {
         <div className="relative">
           <div className="hidden sm:flex absolute top-1/2 left-[calc(33.33%+0.5rem)] right-[calc(33.33%+0.5rem)] -translate-y-1/2 justify-center gap-1 pointer-events-none z-0">
             {[...Array(6)].map((_, i) => (
-              <div key={i} className="w-1 h-1 rounded-full bg-[#e4e4e7]" />
+              <div key={i} className="w-1 h-1 rounded-full bg-[var(--border)]" />
             ))}
           </div>
 
@@ -85,8 +86,8 @@ export default function Slide03Philosophy() {
                       <i className={`fas ${card.icon} ${card.iconTextClass} text-lg`} />
                     </div>
                     <div>
-                      <h3 className="font-bold text-base mb-1.5">{card.label}</h3>
-                      <p className="text-[#71717a] text-sm leading-relaxed">{card.detail}</p>
+                      <h3 className="font-bold text-base mb-1.5 text-[var(--foreground)]">{card.label}</h3>
+                      <p className="text-[var(--muted-foreground)] text-sm leading-relaxed">{card.detail}</p>
                     </div>
                   </div>
                 </CardPitch>

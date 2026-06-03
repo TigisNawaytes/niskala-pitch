@@ -87,14 +87,17 @@ export default function Slide13() {
   ];
 
   return (
-    <div className="w-full h-full flex items-center justify-center px-8 sm:px-12 py-6 overflow-hidden relative dot-grid-brand">
-      <div className="pointer-events-none absolute -top-24 -right-24 w-[380px] h-[380px] rounded-full blur-3xl glow-blob-violet" />
-      <div className="pointer-events-none absolute -bottom-20 -left-20 w-[320px] h-[320px] rounded-full blur-3xl glow-blob-brand" />
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 pointer-events-none bg-hero-pattern" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-brand" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-fade" />
 
-      <div className="relative z-10 max-w-5xl w-full">
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 w-full py-6">
         <SectionLabel color="#a78bfa">NiskalaPure</SectionLabel>
         <FragmentReveal>
-          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-6">
+          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-6 text-[var(--foreground)]">
             System-Agnostic{' '}
             <span className="text-niskala-violet">Kinetic Lab</span>
           </h2>
@@ -106,7 +109,7 @@ export default function Slide13() {
           <div className="lg:col-span-2 flex flex-col gap-4">
             <FragmentReveal delay={0.1} from="left">
               <CardPitch accentColor="#a78bfa" className="flex-1">
-                <h3 className="text-base font-bold mb-4">N-CNT + Langmuir Pipeline</h3>
+                <h3 className="text-base font-bold mb-4 text-[var(--foreground)]">N-CNT + Langmuir Pipeline</h3>
 
                 <div className="relative">
                   <div
@@ -127,10 +130,10 @@ export default function Slide13() {
                         <div className="flex-1 min-w-0 pt-0.5">
                           <div className="flex items-center gap-1.5 flex-wrap">
                             <span className="font-semibold text-sm" style={{ color }}>{name}</span>
-                            <i className="fas fa-arrow-right text-[#71717a] text-[0.5rem]" />
-                            <span className="text-[#71717a] text-sm">{output}</span>
+                            <i className="fas fa-arrow-right text-[var(--muted-foreground)] text-[0.5rem]" />
+                            <span className="text-[var(--muted-foreground)] text-sm">{output}</span>
                           </div>
-                          <p className="text-[0.6rem] text-[#71717a] mt-0.5">{desc}</p>
+                          <p className="text-[0.6rem] text-[var(--muted-foreground)] mt-0.5">{desc}</p>
                         </div>
                       </div>
                     ))}
@@ -141,7 +144,7 @@ export default function Slide13() {
 
             <FragmentReveal delay={0.2} from="left">
               <CardPitch className="flex-1">
-                <h3 className="text-base font-bold mb-3">Use Cases</h3>
+                <h3 className="text-base font-bold mb-3 text-[var(--foreground)]">Use Cases</h3>
                 <div className="space-y-2.5">
                   {[
                     { text: 'Benchmark inhibitor efficacy', icon: 'fa-flask' },
@@ -152,7 +155,7 @@ export default function Slide13() {
                       <div className="w-6 h-6 rounded-md bg-[#a78bfa]/10 flex items-center justify-center shrink-0">
                         <i className={`fas ${icon} text-niskala-violet text-[0.6rem]`} />
                       </div>
-                      <span className="text-sm text-[#0a0a0a]">{text}</span>
+                      <span className="text-sm text-[var(--foreground)]">{text}</span>
                     </div>
                   ))}
                 </div>
@@ -163,7 +166,7 @@ export default function Slide13() {
           <div className="lg:col-span-3">
             <FragmentReveal delay={0.15} from="right">
               <CardPitch className="h-full">
-                <h3 className="text-base font-bold mb-3">Dose-Response Curve</h3>
+                <h3 className="text-base font-bold mb-3 text-[var(--foreground)]">Dose-Response Curve</h3>
                 <div className="chart-box" style={{ height: 280 }}>
                   <ReactECharts
                     option={chartOption}
@@ -171,7 +174,7 @@ export default function Slide13() {
                     opts={{ renderer: 'svg' }}
                   />
                 </div>
-                <p className="text-xs text-[#71717a] mt-3 text-center">
+                <p className="text-xs text-[var(--muted-foreground)] mt-3 text-center">
                   t<sub>ind</sub> saturates with dose — MED found at the elbow
                 </p>
               </CardPitch>

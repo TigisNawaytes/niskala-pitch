@@ -5,25 +5,26 @@ import RaceBar from '../components/RaceBar';
 
 export default function Slide07Kinetics() {
   return (
-    <div className="w-full h-full flex items-center justify-center px-8 sm:px-12 py-6 overflow-hidden relative">
-      <div className="absolute inset-0 pointer-events-none dot-grid" />
-      <div className="absolute -top-28 -right-28 w-[440px] h-[440px] rounded-full pointer-events-none glow-blob-violet" />
-      <div className="absolute -bottom-32 -left-32 w-[400px] h-[400px] rounded-full pointer-events-none glow-blob-brand" />
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 pointer-events-none bg-hero-pattern" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-brand" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-fade" />
 
-      <div className="relative z-10 max-w-5xl w-full">
+      <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 w-full">
         <SectionLabel>Kinetics</SectionLabel>
 
         <FragmentReveal>
-          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-2">
+          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-2 text-[var(--foreground)]">
             The <span className="stat-gradient">Time</span> Dimension
           </h2>
-          <p className="text-lg font-light text-[#71717a] mb-8 tracking-tight">
+          <p className="text-lg font-light text-[var(--muted-foreground)] mb-8 tracking-tight">
             of Crystallization
           </p>
         </FragmentReveal>
 
         <FragmentReveal delay={0.15}>
-          <p className="text-[#71717a] text-base sm:text-lg max-w-3xl mb-6 leading-relaxed">
+          <p className="text-[var(--muted-foreground)] text-base sm:text-lg max-w-3xl mb-6 leading-relaxed">
             Thermodynamics tells you <em>if</em> it scales. Kinetics tells you{' '}
             <em>when</em> — and whether your system outruns the crystal.
           </p>
@@ -33,7 +34,7 @@ export default function Slide07Kinetics() {
           <FragmentReveal delay={0.3} from="left">
             <CardPitch accentColor="#a78bfa">
               <h3 className="text-lg font-bold mb-1 text-niskala-violet">N-CNT Kinetic Model</h3>
-              <p className="text-[0.75rem] text-[#71717a] mb-4 leading-relaxed">
+              <p className="text-[0.75rem] text-[var(--muted-foreground)] mb-4 leading-relaxed">
                 Dai et al. (2021) — classical nucleation theory
               </p>
               <div className="formula-block">
@@ -57,8 +58,8 @@ export default function Slide07Kinetics() {
             <CardPitch accentColor="#10b981">
               <h3 className="text-lg font-bold mb-3 text-niskala-safe">Safety Criterion</h3>
 
-              <div className="bg-[#10b981]/[0.05] border border-[#10b981]/20 rounded-xl px-5 py-4 mb-4 flex items-center justify-between gap-4">
-                <code className="font-mono text-base sm:text-xl font-bold text-[#0a0a0a] tracking-tight">
+              <div className="bg-[var(--card)] border border-[var(--border)] rounded-xl px-5 py-4 mb-4 flex items-center justify-between gap-4">
+                <code className="font-mono text-base sm:text-xl font-bold text-[var(--foreground)] tracking-tight">
                   t<sub>ind</sub> &ge; 1.2 &times; T<sub>res</sub>
                 </code>
                 <span className="badge-safe shrink-0">
@@ -66,7 +67,7 @@ export default function Slide07Kinetics() {
                 </span>
               </div>
 
-              <div className="mb-1 flex items-center justify-between text-[0.6rem] text-[#71717a] font-semibold uppercase tracking-wider px-0.5">
+              <div className="mb-1 flex items-center justify-between text-[0.6rem] text-[var(--muted-foreground)] font-semibold uppercase tracking-wider px-0.5">
                 <span>TIME</span>
                 <span>FASTER CRYSTAL →</span>
               </div>
@@ -90,7 +91,7 @@ export default function Slide07Kinetics() {
                 />
               </div>
 
-              <div className="mt-3 pt-3 border-t border-[#e4e4e7] flex items-center justify-between">
+              <div className="mt-3 pt-3 border-t border-[var(--border)] flex items-center justify-between">
                 <p className="text-[0.7rem] text-niskala-safe font-semibold">
                   t<sub>ind</sub> / T<sub>res</sub> = 1.54&times; &mdash; Kinetic margin safe
                 </p>

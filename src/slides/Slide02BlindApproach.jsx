@@ -27,7 +27,7 @@ function StepList({ steps, circleColor, textColor, circleBg, baseDelay = 0 }) {
             >
               {i + 1}
             </span>
-            <span className="text-sm sm:text-base leading-relaxed text-[#0a0a0a]">
+            <span className="text-sm sm:text-base leading-relaxed text-[var(--foreground)]">
               {step}
             </span>
           </li>
@@ -39,22 +39,17 @@ function StepList({ steps, circleColor, textColor, circleBg, baseDelay = 0 }) {
 
 export default function Slide02BlindApproach() {
   return (
-    <div className="w-full h-full flex items-center justify-center px-8 sm:px-12 py-6 overflow-hidden relative">
-      <div
-        className="absolute -top-32 -left-32 w-[420px] h-[420px] rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse, #ef444408 0%, transparent 70%)' }}
-      />
-      <div
-        className="absolute -bottom-40 -right-40 w-[420px] h-[420px] rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse, #10b98108 0%, transparent 70%)' }}
-      />
-      <div className="absolute inset-0 pointer-events-none dot-grid" />
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 pointer-events-none bg-hero-pattern" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-brand" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-fade" />
 
-      <div className="relative z-10 max-w-6xl w-full">
+      <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 w-full">
         <SectionLabel>Current Practice</SectionLabel>
 
         <FragmentReveal delay={0.05}>
-          <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-black tracking-tight leading-[1.05] mb-8">
+          <h2 className="text-[clamp(1.8rem,4vw,3rem)] font-black tracking-tight leading-[1.05] mb-8 text-[var(--foreground)]">
             The <span className="text-[#ef4444]">Blind</span> Chemical Dosing Loop
           </h2>
         </FragmentReveal>
@@ -78,18 +73,18 @@ export default function Slide02BlindApproach() {
 
           <FragmentReveal delay={0.25} from="scale">
             <div className="hidden md:flex flex-col items-center justify-center px-4 gap-3 self-stretch">
-              <div className="flex-1 w-px bg-gradient-to-b from-transparent via-[#e4e4e7] to-transparent" />
-              <div className="flex items-center justify-center w-9 h-9 rounded-full border-2 border-[#e4e4e7] bg-white shadow-sm">
-                <span className="text-[10px] font-black text-[#a1a1aa] tracking-widest">VS</span>
+              <div className="flex-1 w-px bg-gradient-to-b from-transparent via-[var(--border)] to-transparent" />
+              <div className="flex items-center justify-center w-9 h-9 rounded-full border-2 border-[var(--border)] bg-[var(--card)] shadow-sm">
+                <span className="text-[10px] font-black text-[var(--muted-foreground)] tracking-widest">VS</span>
               </div>
-              <div className="flex-1 w-px bg-gradient-to-b from-transparent via-[#e4e4e7] to-transparent" />
+              <div className="flex-1 w-px bg-gradient-to-b from-transparent via-[var(--border)] to-transparent" />
             </div>
           </FragmentReveal>
 
           <div className="md:hidden flex items-center gap-3 my-1">
-            <div className="flex-1 h-px bg-[#e4e4e7]" />
-            <span className="text-[10px] font-black text-[#a1a1aa] tracking-widest px-2 py-1 border border-[#e4e4e7] rounded-full">VS</span>
-            <div className="flex-1 h-px bg-[#e4e4e7]" />
+            <div className="flex-1 h-px bg-[var(--border)]" />
+            <span className="text-[10px] font-black text-[var(--muted-foreground)] tracking-widest px-2 py-1 border border-[var(--border)] rounded-full">VS</span>
+            <div className="flex-1 h-px bg-[var(--border)]" />
           </div>
 
           <FragmentReveal delay={0.3} from="right">

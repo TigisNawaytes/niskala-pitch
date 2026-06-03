@@ -26,15 +26,18 @@ const MAX_HM_HEIGHT = 100;
 
 export default function Slide10NiskalaRO() {
   return (
-    <div className="w-full h-full flex items-center justify-center px-8 sm:px-12 py-6 overflow-hidden relative dot-grid-brand">
-      <div className="pointer-events-none absolute -top-24 -right-24 w-[400px] h-[400px] rounded-full blur-3xl glow-blob-brand" />
-      <div className="pointer-events-none absolute bottom-0 left-0 w-[300px] h-[300px] rounded-full blur-3xl glow-blob-brand" />
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 pointer-events-none bg-hero-pattern" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-brand" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-fade" />
 
-      <div className="relative z-10 max-w-5xl w-full">
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 w-full py-6">
         <SectionLabel color="#5170ff">NiskalaRO</SectionLabel>
 
         <FragmentReveal>
-          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-6">
+          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-6 text-[var(--foreground)]">
             Membrane <span className="text-niskala-brand">Reactive Transport</span>
           </h2>
         </FragmentReveal>
@@ -45,7 +48,7 @@ export default function Slide10NiskalaRO() {
           <div className="flex flex-col gap-4">
             <FragmentReveal delay={0.1} from="left">
               <CardPitch accentColor="#5170ff">
-                <h3 className="text-lg font-bold mb-4">6-Element &times; 12-Cell Model</h3>
+                <h3 className="text-lg font-bold mb-4 text-[var(--foreground)]">6-Element &times; 12-Cell Model</h3>
 
                 <div className="flex items-end justify-center gap-3 mb-1" style={{ height: 84 }}>
                   {elements.map((el, i) => (
@@ -67,18 +70,18 @@ export default function Slide10NiskalaRO() {
                 <div className="flex items-center justify-center gap-3 mb-1">
                   {elements.map((el) => (
                     <div key={el} className="w-8 text-center">
-                      <span className="text-[0.58rem] font-mono text-[#71717a]">{el}</span>
+                      <span className="text-[0.58rem] font-mono text-[var(--muted-foreground)]">{el}</span>
                     </div>
                   ))}
                 </div>
 
                 <div className="flex items-center justify-between px-1 mb-3">
-                  <span className="text-[0.55rem] font-mono text-[#71717a]">Inlet</span>
-                  <div className="flex-1 mx-2 border-t border-dashed border-[#e4e4e7]" />
-                  <span className="text-[0.55rem] font-mono text-[#71717a]">Concentrate</span>
+                  <span className="text-[0.55rem] font-mono text-[var(--muted-foreground)]">Inlet</span>
+                  <div className="flex-1 mx-2 border-t border-dashed border-[var(--border)]" />
+                  <span className="text-[0.55rem] font-mono text-[var(--muted-foreground)]">Concentrate</span>
                 </div>
 
-                <p className="text-[0.72rem] text-[#71717a] leading-relaxed">
+                <p className="text-[0.72rem] text-[var(--muted-foreground)] leading-relaxed">
                   Concentration Factor increases linearly along elements &rarr; scaling risk
                   concentrates at the tail.
                 </p>
@@ -87,7 +90,7 @@ export default function Slide10NiskalaRO() {
 
             <FragmentReveal delay={0.2} from="left">
               <CardPitch>
-                <h3 className="text-lg font-bold mb-3">Key Equations</h3>
+                <h3 className="text-lg font-bold mb-3 text-[var(--foreground)]">Key Equations</h3>
                 <div className="formula-block">
                   <div className="formula-block-header">Kinetics</div>
                   <div className="formula-block-body">
@@ -103,7 +106,7 @@ export default function Slide10NiskalaRO() {
 
           <FragmentReveal delay={0.15} from="right">
             <CardPitch className="h-full">
-              <h3 className="text-lg font-bold mb-3">Surface Loading Heatmap</h3>
+              <h3 className="text-lg font-bold mb-3 text-[var(--foreground)]">Surface Loading Heatmap</h3>
 
               <div className="flex flex-wrap gap-1.5 mb-5">
                 {minerals.map((m) => (
@@ -112,7 +115,7 @@ export default function Slide10NiskalaRO() {
                     className={`px-2.5 py-0.5 rounded-full text-[0.6rem] font-semibold cursor-pointer transition-colors ${
                       m.active
                         ? 'bg-niskala-brand text-white shadow-sm'
-                        : 'bg-[#e4e4e7] text-[#71717a]'
+                        : 'bg-[var(--card)] text-[var(--muted-foreground)] border border-[var(--border)]'
                     }`}
                   >
                     {m.name}
@@ -123,7 +126,7 @@ export default function Slide10NiskalaRO() {
               <div className="flex items-end justify-center gap-3 mb-1" style={{ height: MAX_HM_HEIGHT + 8 }}>
                 {heatmapData.map((d, i) => (
                   <div key={d.label} className="flex flex-col items-center gap-1">
-                    <span className="text-[0.55rem] font-mono text-[#71717a]">{d.pct}%</span>
+                    <span className="text-[0.55rem] font-mono text-[var(--muted-foreground)]">{d.pct}%</span>
                     <motion.div
                       className="w-9 rounded-t-md"
                       style={{ background: `linear-gradient(180deg, ${d.color}99 0%, ${d.color} 100%)` }}
@@ -139,26 +142,26 @@ export default function Slide10NiskalaRO() {
               <div className="flex items-center justify-center gap-3 mb-1">
                 {heatmapData.map((d) => (
                   <div key={d.label} className="w-9 text-center">
-                    <span className="text-[0.58rem] font-mono text-[#71717a]">{d.label}</span>
+                    <span className="text-[0.58rem] font-mono text-[var(--muted-foreground)]">{d.label}</span>
                   </div>
                 ))}
               </div>
 
               <div className="flex items-center justify-between px-1 mb-3">
-                <span className="text-[0.55rem] font-mono text-[#71717a]">Inlet</span>
-                <div className="flex-1 mx-2 border-t border-dashed border-[#e4e4e7]" />
-                <span className="text-[0.55rem] font-mono text-[#71717a]">Concentrate</span>
+                <span className="text-[0.55rem] font-mono text-[var(--muted-foreground)]">Inlet</span>
+                <div className="flex-1 mx-2 border-t border-dashed border-[var(--border)]" />
+                <span className="text-[0.55rem] font-mono text-[var(--muted-foreground)]">Concentrate</span>
               </div>
 
               <div className="flex items-center gap-2 mb-3">
-                <span className="text-[0.55rem] text-[#71717a] font-mono">Low</span>
+                <span className="text-[0.55rem] text-[var(--muted-foreground)] font-mono">Low</span>
                 <div className="flex-1 h-2 rounded-full bg-gradient-to-r from-[#10b981] via-[#eab308] to-[#ef4444]" />
-                <span className="text-[0.55rem] text-[#71717a] font-mono">High</span>
+                <span className="text-[0.55rem] text-[var(--muted-foreground)] font-mono">High</span>
               </div>
 
               <div className="subtle-divider my-3" />
 
-              <p className="text-[0.72rem] text-[#71717a] leading-relaxed">
+              <p className="text-[0.72rem] text-[var(--muted-foreground)] leading-relaxed">
                 <span className="text-[#ef4444] font-semibold">Element 5&ndash;6</span>: highest scaling
                 risk &mdash; requires targeted inhibitor dosing
               </p>

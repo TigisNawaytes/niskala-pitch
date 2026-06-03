@@ -31,15 +31,18 @@ const products = [
 
 export default function Slide20About() {
   return (
-    <div className="w-full h-full flex items-center justify-center px-8 sm:px-12 py-6 overflow-hidden relative bg-niskala-brand/[0.02] dot-grid-brand">
-      <div className="absolute -top-24 -right-24 w-96 h-96 rounded-full pointer-events-none glow-blob-brand" />
-      <div className="absolute -bottom-32 -left-32 w-[28rem] h-[28rem] rounded-full pointer-events-none glow-blob-violet" />
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 pointer-events-none bg-hero-pattern" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-brand" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-fade" />
 
-      <div className="relative z-10 max-w-5xl w-full">
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 w-full">
         <SectionLabel>About</SectionLabel>
 
         <FragmentReveal>
-          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-6">
+          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-6 text-[var(--foreground)]">
             Built by a <span className="stat-gradient">Chemist</span>, for{' '}
             <span className="stat-gradient">Chemists</span>
           </h2>
@@ -54,15 +57,15 @@ export default function Slide20About() {
                     <i className="fas fa-hard-hat text-niskala-brand text-2xl" />
                   </div>
                   <div>
-                    <h3 className="font-bold text-lg leading-tight">Sigit Setyawan</h3>
-                    <p className="text-[#71717a] text-sm mt-0.5">Power Plant Chemist Engineer</p>
+                    <h3 className="font-bold text-lg leading-tight text-[var(--foreground)]">Sigit Setyawan</h3>
+                    <p className="text-[var(--muted-foreground)] text-sm mt-0.5">Power Plant Chemist Engineer</p>
                     <div className="flex items-center gap-1.5 mt-1.5">
                       <span className="w-2 h-2 rounded-full bg-[#10b981]" />
-                      <span className="text-[10px] text-[#71717a] font-medium">Available for partnership</span>
+                      <span className="text-[10px] text-[var(--muted-foreground)] font-medium">Available for partnership</span>
                     </div>
                   </div>
                 </div>
-                <ul className="space-y-2.5 text-[#71717a] text-sm">
+                <ul className="space-y-2.5 text-[var(--muted-foreground)] text-sm">
                   <li className="flex items-start gap-2.5">
                     <span className="w-1.5 h-1.5 rounded-full bg-niskala-brand mt-1.5 shrink-0" />
                     10+ years power plant ops
@@ -83,17 +86,17 @@ export default function Slide20About() {
           <FragmentReveal delay={0.2}>
             <CardPitch accentColor="#a78bfa">
               <div className="flex flex-col gap-4">
-                <h3 className="font-bold text-base">Niskala Platform — Products Built</h3>
+                <h3 className="font-bold text-base text-[var(--foreground)]">Niskala Platform — Products Built</h3>
                 <div className="space-y-2">
                   {products.map((p) => (
                     <div
                       key={p.name}
-                      className={`flex items-center gap-3 px-3 py-3 rounded-lg bg-white border border-[#e4e4e7] border-l-4 ${p.border} shadow-sm`}
+                      className={`flex items-center gap-3 px-3 py-3 rounded-xl bg-[var(--card)] border border-[var(--border)] border-l-4 ${p.border} shadow-sm`}
                     >
                       <i className={`fas ${p.icon} ${p.iconColor} text-base w-5 text-center`} />
                       <div>
-                        <p className="text-sm font-bold text-[#0a0a0a] leading-tight">{p.name}</p>
-                        <p className="text-[10px] text-[#71717a]">{p.desc}</p>
+                        <p className="text-sm font-bold text-[var(--foreground)] leading-tight">{p.name}</p>
+                        <p className="text-[10px] text-[var(--muted-foreground)]">{p.desc}</p>
                       </div>
                     </div>
                   ))}
@@ -104,18 +107,18 @@ export default function Slide20About() {
         </div>
 
         <FragmentReveal delay={0.35}>
-          <div className="glass-strong rounded-2xl p-8 max-w-2xl mx-auto text-center relative shadow-elevated">
+          <CardPitch className="max-w-2xl mx-auto text-center">
             <div className="text-[5rem] leading-none text-niskala-brand/10 font-serif absolute -top-4 -left-2 select-none">&ldquo;</div>
-            <p className="text-[#3a3a3a] italic text-base sm:text-lg leading-relaxed font-medium px-8 relative z-10">
+            <p className="text-[var(--foreground)] italic text-base sm:text-lg leading-relaxed font-medium px-8 relative z-10">
               &ldquo;I built Niskala because I was tired of blackbox chemical recommendations
               that couldn&rsquo;t be verified. Every engineer deserves to understand why a dose
               works &mdash; not just trust the vendor&rsquo;s word.&rdquo;
             </p>
             <div className="text-[5rem] leading-none text-niskala-brand/10 font-serif absolute -bottom-8 -right-2 select-none rotate-180">&ldquo;</div>
-            <p className="text-[#71717a] text-xs font-semibold mt-3 uppercase tracking-wider">
+            <p className="text-[var(--muted-foreground)] text-xs font-semibold mt-3 uppercase tracking-wider">
               &mdash; Sigit Setyawan
             </p>
-          </div>
+          </CardPitch>
         </FragmentReveal>
       </div>
     </div>

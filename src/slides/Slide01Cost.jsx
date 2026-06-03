@@ -31,26 +31,23 @@ const stats = [
 
 export default function Slide01Cost() {
   return (
-    <div className="w-full h-full flex items-center justify-center px-8 sm:px-12 py-6 overflow-hidden relative">
-      <div className="absolute inset-0 pointer-events-none dot-grid" />
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 pointer-events-none bg-hero-pattern" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-brand" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-fade" />
 
-      <div
-        className="absolute top-1/2 left-1/2 -translate-x-1/2 -translate-y-1/2 w-[700px] h-[500px] rounded-full pointer-events-none"
-        style={{ background: 'radial-gradient(ellipse, #ef444408 0%, transparent 70%)' }}
-      />
-      <div className="absolute -top-24 -right-24 w-80 h-80 rounded-full pointer-events-none glow-blob-brand" />
-
-      <div className="relative z-10 max-w-5xl w-full">
+      <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 w-full">
         <SectionLabel>The Problem</SectionLabel>
 
         <FragmentReveal delay={0}>
-          <h2 className="text-[clamp(2rem,4.5vw,3.2rem)] font-black tracking-tight leading-[1.05] mb-8">
+          <h2 className="text-[clamp(2rem,4.5vw,3.2rem)] font-black tracking-tight leading-[1.05] mb-8 text-[var(--foreground)]">
             Scaling Is <span className="stat-gradient">Expensive</span>
           </h2>
         </FragmentReveal>
 
         <FragmentReveal delay={0.1}>
-          <p className="text-[#71717a] text-base sm:text-lg max-w-3xl mb-6 leading-relaxed">
+          <p className="text-[var(--muted-foreground)] text-base sm:text-lg max-w-3xl mb-6 leading-relaxed">
             Mineral scale formation on heat transfer surfaces and membranes costs the industry
             billions annually in energy penalties, chemical waste, and unplanned downtime.
           </p>
@@ -59,7 +56,7 @@ export default function Slide01Cost() {
         <div className="grid sm:grid-cols-3 gap-4 sm:gap-6">
           {stats.map((stat, i) => (
             <FragmentReveal key={stat.label} delay={0.25 + i * 0.15} from="scale">
-              <CardPitch accentColor="#ef4444" className="relative overflow-hidden p-6">
+              <CardPitch accentColor="#ef4444">
                 <div
                   className="absolute inset-0 pointer-events-none"
                   style={{ background: stat.blob }}
@@ -80,12 +77,12 @@ export default function Slide01Cost() {
                       {stat.number}
                     </span>
                     {stat.unit && (
-                      <span className="text-[#71717a] font-normal text-2xl mb-1">{stat.unit}</span>
+                      <span className="text-[var(--muted-foreground)] font-normal text-2xl mb-1">{stat.unit}</span>
                     )}
                   </div>
 
-                  <h3 className="text-[#0a0a0a] font-bold text-base">{stat.label}</h3>
-                  <p className="text-[#71717a] text-sm leading-relaxed">{stat.detail}</p>
+                  <h3 className="text-[var(--foreground)] font-bold text-base">{stat.label}</h3>
+                  <p className="text-[var(--muted-foreground)] text-sm leading-relaxed">{stat.detail}</p>
                 </div>
               </CardPitch>
             </FragmentReveal>
@@ -95,7 +92,7 @@ export default function Slide01Cost() {
         <FragmentReveal delay={0.7}>
           <div className="mt-8">
             <div className="subtle-divider mb-4" />
-            <p className="text-[#a1a1aa] text-xs text-center tracking-wide">
+            <p className="text-[var(--muted-foreground)] text-xs text-center tracking-wide">
               Sources: NACE IMPACT Study (2016) · MacAdam &amp; Parsons (2004) · Ahmed et al. (2024)
             </p>
           </div>

@@ -73,15 +73,18 @@ const chartOption = {
 
 export default function Slide16DoseResponse() {
   return (
-    <div className="w-full h-full flex items-center justify-center px-8 sm:px-12 py-6 overflow-hidden relative dot-grid-brand">
-      <div className="absolute -top-20 -right-20 w-96 h-96 rounded-full pointer-events-none glow-blob-brand" />
-      <div className="absolute -bottom-24 -left-24 w-80 h-80 rounded-full pointer-events-none glow-blob-ct" />
+    <div className="relative w-full h-full flex items-center justify-center overflow-hidden">
+      {/* Background patterns */}
+      <div className="absolute inset-0 pointer-events-none bg-hero-pattern" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-brand" />
+      <div className="absolute inset-0 pointer-events-none bg-radial-fade" />
 
-      <div className="relative z-10 max-w-5xl w-full">
+      {/* Content */}
+      <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 w-full">
         <SectionLabel>Model</SectionLabel>
 
         <FragmentReveal>
-          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-6">
+          <h2 className="text-[2.2rem] sm:text-[3rem] font-black tracking-tight leading-[1.05] mb-6 text-[var(--foreground)]">
             Empirical <span className="stat-gradient">Dose-Response</span> Model
           </h2>
         </FragmentReveal>
@@ -90,7 +93,7 @@ export default function Slide16DoseResponse() {
           <div className="flex flex-col gap-4">
             <FragmentReveal delay={0.1}>
               <CardPitch accentColor="#5170ff">
-                <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
+                <h3 className="text-lg font-bold mb-3 flex items-center gap-2 text-[var(--foreground)]">
                   <i className="fas fa-square-root-alt text-niskala-brand" /> Model Equation
                 </h3>
                 <div className="formula-block mb-3">
@@ -99,26 +102,26 @@ export default function Slide16DoseResponse() {
                   {' = '}
                   <span className="text-niskala-brand font-semibold">SI</span>
                   <sub className="text-niskala-brand">membrane</sub>
-                  {' \u2212 '}
-                  <span className="text-niskala-violet font-semibold">&Delta;SI</span>
+                  {' − '}
+                  <span className="text-niskala-violet font-semibold">ΔSI</span>
                   <sub className="text-niskala-violet">max</sub>
-                  {' \u00D7 '}
-                  (1 &minus; e<sup>&minus;k&middot;dose</sup>)
-                  {' \u00D7 '}
+                  {' × '}
+                  (1 &minus; e<sup>−k·dose</sup>)
+                  {' × '}
                   <span className="text-niskala-ct">0.8</span>
                 </div>
-                <ul className="space-y-2 text-xs text-[#71717a]">
+                <ul className="space-y-2 text-xs text-[var(--muted-foreground)]">
                   <li className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-niskala-brand mt-[5px] shrink-0" />
-                    <span><strong className="text-[#0a0a0a]">SI</strong><sub>membrane</sub> — baseline scaling index without inhibition</span>
+                    <span><strong className="text-[var(--foreground)]">SI</strong><sub>membrane</sub> — baseline scaling index without inhibition</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-niskala-violet mt-[5px] shrink-0" />
-                    <span><strong className="text-[#0a0a0a]">&Delta;SI</strong><sub>max</sub> — maximum SI reduction at saturation (plateau)</span>
+                    <span><strong className="text-[var(--foreground)]">ΔSI</strong><sub>max</sub> — maximum SI reduction at saturation (plateau)</span>
                   </li>
                   <li className="flex items-start gap-2">
                     <span className="w-1.5 h-1.5 rounded-full bg-niskala-ct mt-[5px] shrink-0" />
-                    <span><strong className="text-[#0a0a0a]">k</strong> — rate constant governing dose sensitivity</span>
+                    <span><strong className="text-[var(--foreground)]">k</strong> — rate constant governing dose sensitivity</span>
                   </li>
                 </ul>
               </CardPitch>
@@ -126,10 +129,10 @@ export default function Slide16DoseResponse() {
 
             <FragmentReveal delay={0.2}>
               <CardPitch>
-                <h3 className="text-lg font-bold mb-2 flex items-center gap-2">
+                <h3 className="text-lg font-bold mb-2 flex items-center gap-2 text-[var(--foreground)]">
                   <i className="fas fa-flask text-niskala-brand" /> Calibration Source
                 </h3>
-                <p className="text-sm text-[#71717a] leading-relaxed">
+                <p className="text-sm text-[var(--muted-foreground)] leading-relaxed">
                   70+ data points from Ahmed et al. (2024), Amjad (2022), Dai et al. (2021).
                 </p>
                 <div className="mt-3">
@@ -144,7 +147,7 @@ export default function Slide16DoseResponse() {
 
           <FragmentReveal delay={0.1}>
             <CardPitch accentColor="#5170ff">
-              <h3 className="text-lg font-bold mb-3 flex items-center gap-2">
+              <h3 className="text-lg font-bold mb-3 flex items-center gap-2 text-[var(--foreground)]">
                 <i className="fas fa-chart-line text-niskala-brand" /> Dose-Response: Phosphonate on Calcite
               </h3>
               <div className="chart-box">
@@ -155,11 +158,11 @@ export default function Slide16DoseResponse() {
                 />
               </div>
               <div className="subtle-divider my-2" />
-              <p className="text-xs text-[#71717a] leading-snug">
+              <p className="text-xs text-[var(--muted-foreground)] leading-snug">
                 <span className="text-niskala-brand font-semibold">SI</span>
                 <sub className="text-niskala-brand">membrane</sub>
-                {' = 1.27 \u2192 '}
-                <strong className="text-[#0a0a0a]">MED = 2.3 ppm</strong>
+                {' = 1.27 → '}
+                <strong className="text-[var(--foreground)]">MED = 2.3 ppm</strong>
                 {' brings SI'}
                 <sub>eff</sub>
                 {' below threshold 0.30'}
