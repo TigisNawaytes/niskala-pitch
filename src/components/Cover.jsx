@@ -8,8 +8,8 @@ export default function Cover() {
   return (
     <AnimatePresence>
       {coverVisible && (
-        <motion.div
-          className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden"
+          <motion.div
+          className="fixed inset-0 z-50 overflow-y-auto"
           style={{ background: 'var(--background)' }}
           exit={{ opacity: 0, filter: 'blur(8px)' }}
           transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
@@ -33,7 +33,7 @@ export default function Cover() {
             }}
           />
 
-          <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 text-center" style={{ paddingTop: 'clamp(1.5rem, 5vh, 3rem)', paddingBottom: 'clamp(1.5rem, 5vh, 3rem)' }}>
+          <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center min-h-screen py-12">
 
             <motion.div
               initial={{ opacity: 0, y: 12 }}
