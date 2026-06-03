@@ -8,8 +8,8 @@ export default function Cover() {
   return (
     <AnimatePresence>
       {coverVisible && (
-          <motion.div
-          className="fixed inset-0 z-50 overflow-y-auto"
+        <motion.div
+          className="fixed inset-0 z-50 flex items-center justify-center overflow-hidden"
           style={{ background: 'var(--background)' }}
           exit={{ opacity: 0, filter: 'blur(8px)' }}
           transition={{ duration: 0.7, ease: [0.4, 0, 0.2, 1] }}
@@ -33,14 +33,35 @@ export default function Cover() {
             }}
           />
 
-          <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 text-center flex flex-col items-center justify-center min-h-screen py-12">
+          <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 text-center py-4">
+
+            <motion.div
+              initial={{ opacity: 0, y: 12 }}
+              animate={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.05 }}
+              className="mb-3"
+            >
+              <span
+                className="font-extrabold tracking-tight"
+                style={{
+                  fontSize: 'clamp(1.5rem, 3vw + 0.5rem, 2.5rem)',
+                  background: 'linear-gradient(135deg, #5170ff 0%, #7b93ff 100%)',
+                  WebkitBackgroundClip: 'text',
+                  WebkitTextFillColor: 'transparent',
+                  backgroundClip: 'text',
+                }}
+              >
+                Niskala
+                <span style={{ background: 'none', WebkitTextFillColor: '#8aa0ff', color: '#8aa0ff' }}>.</span>
+              </span>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
             >
-              <div className="inline-flex items-center gap-2.5 mb-6 px-3.5 py-1.5 rounded-full border border-niskala-brand/25 bg-niskala-brand/8 text-niskala-brand">
+              <div className="inline-flex items-center gap-2.5 mb-4 px-3.5 py-1.5 rounded-full border border-niskala-brand/25 bg-niskala-brand/8 text-niskala-brand">
                 <span className="w-1.5 h-1.5 rounded-full bg-niskala-brand animate-pulse" />
                 <span className="text-[11px] font-bold tracking-[0.18em]">OPEN-ENGINE PLATFORM</span>
               </div>
@@ -51,7 +72,7 @@ export default function Cover() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
             >
-              <h1 className="font-bold tracking-tight text-[var(--foreground)] mb-5" style={{ fontSize: 'clamp(1.75rem, 4vw + 0.5rem, 3.25rem)', lineHeight: 1.1 }}>
+              <h1 className="font-bold tracking-tight text-[var(--foreground)] mb-3" style={{ fontSize: 'clamp(1.5rem, 3.5vw + 0.5rem, 2.75rem)', lineHeight: 1.1 }}>
                 Understand the Process.<br />
                 <span className="relative inline-block">
                   Trust the{' '}
@@ -75,7 +96,7 @@ export default function Cover() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
             >
-              <p className="text-[var(--muted-foreground)] mb-4 max-w-2xl mx-auto leading-relaxed" style={{ fontSize: 'clamp(0.8rem, 1.2vw + 0.2rem, 1rem)' }}>
+              <p className="text-[var(--muted-foreground)] mb-6 max-w-2xl mx-auto leading-relaxed" style={{ fontSize: 'clamp(0.75rem, 1vw + 0.2rem, 0.9rem)' }}>
                 Boutique simulation platform for water chemistry engineers. Every calculation
                 is traceable — from ion concentration to risk assessment — built for
                 precision and transparency.
@@ -83,32 +104,11 @@ export default function Cover() {
             </motion.div>
 
             <motion.div
-              initial={{ opacity: 0, y: 8 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-            >
-              <div className="flex flex-wrap items-center justify-center gap-2 mb-10 text-[11px] font-semibold text-[var(--muted-foreground)]">
-                <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--muted)] border border-[var(--border)]">
-                  <i className="fas fa-flask text-niskala-brand" style={{ fontSize: '11px' }} /> PHREEQC Pitzer Model
-                </span>
-                <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--muted)] border border-[var(--border)]">
-                  <i className="fas fa-shield-alt text-niskala-brand" style={{ fontSize: '11px' }} /> Vendor-Agnostic Audit
-                </span>
-                <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--muted)] border border-[var(--border)]">
-                  <i className="fas fa-chart-bar text-niskala-brand" style={{ fontSize: '11px' }} /> 6-Mineral Spatial Profile
-                </span>
-                <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--muted)] border border-[var(--border)]">
-                  <i className="fas fa-book-open text-niskala-brand" style={{ fontSize: '11px' }} /> Traceable Science
-                </span>
-              </div>
-            </motion.div>
-
-            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
             >
-              <div               className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto mb-12">
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 max-w-4xl mx-auto mb-6">
 
                 <div
                   className="relative rounded-xl p-px overflow-hidden cursor-default group h-full"
@@ -131,7 +131,7 @@ export default function Cover() {
                   />
 
                   <div className="relative bg-[var(--card)] rounded-xl text-left overflow-hidden h-full flex flex-col">
-                    <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[var(--border)] bg-[var(--muted)] flex-shrink-0">
+                    <div className="flex items-center gap-2 px-4 py-2 border-b border-[var(--border)] bg-[var(--muted)] flex-shrink-0">
                       <div className="flex gap-1.5">
                         <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(239,68,68,0.5)' }} />
                         <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(245,158,11,0.5)' }} />
@@ -144,12 +144,12 @@ export default function Cover() {
                       </div>
                     </div>
 
-                    <div className="relative p-5 sm:p-6 flex-1">
-                      <h3 className="text-base font-bold mb-1.5 tracking-tight text-[var(--foreground)]">
+                    <div className="relative p-4 sm:p-5 flex-1">
+                      <h3 className="text-base font-bold mb-1 tracking-tight text-[var(--foreground)]">
                         Niskala<span className="text-niskala-brand">RO</span>
                       </h3>
-                      <p className="text-[var(--muted-foreground)] text-[13px] leading-relaxed mb-4">
-                        Scaling prediction for Reverse Osmosis. 72-cell reactive transport.
+                      <p className="text-[var(--muted-foreground)] text-[13px] leading-relaxed mb-2">
+                        RO scaling prediction. 72-cell reactive transport.
                       </p>
                       <div className="flex items-center gap-1.5 text-[13px] font-semibold text-niskala-brand">
                         Launch <i className="fas fa-chevron-right" style={{ fontSize: '14px' }} />
@@ -178,7 +178,7 @@ export default function Cover() {
                     }}
                   />
                   <div className="relative bg-[var(--card)] rounded-xl text-left overflow-hidden h-full flex flex-col">
-                    <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[var(--border)] bg-[var(--muted)] flex-shrink-0">
+                    <div className="flex items-center gap-2 px-4 py-2 border-b border-[var(--border)] bg-[var(--muted)] flex-shrink-0">
                       <div className="flex gap-1.5">
                         <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(239,68,68,0.5)' }} />
                         <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(245,158,11,0.5)' }} />
@@ -190,12 +190,12 @@ export default function Cover() {
                         <span className="text-[10px] font-bold tracking-wide" style={{ color: '#14b8a6' }}>ACTIVE</span>
                       </div>
                     </div>
-                    <div className="relative p-5 sm:p-6 flex-1">
-                      <h3 className="text-base font-bold mb-1.5 tracking-tight text-[var(--foreground)]">
+                    <div className="relative p-4 sm:p-5 flex-1">
+                      <h3 className="text-base font-bold mb-1 tracking-tight text-[var(--foreground)]">
                         Niskala<span style={{ color: '#14b8a6' }}>CT</span>
                       </h3>
-                      <p className="text-[var(--muted-foreground)] text-[13px] leading-relaxed mb-4">
-                        Cooling tower water-cycle optimization and heat rejection management.
+                      <p className="text-[var(--muted-foreground)] text-[13px] leading-relaxed mb-2">
+                        Cooling tower water-cycle optimization.
                       </p>
                       <div className="flex items-center gap-1.5 text-[13px] font-semibold" style={{ color: '#14b8a6' }}>
                         Launch <i className="fas fa-chevron-right" style={{ fontSize: '14px' }} />
@@ -224,7 +224,7 @@ export default function Cover() {
                     }}
                   />
                   <div className="relative bg-[var(--card)] rounded-xl text-left overflow-hidden h-full flex flex-col">
-                    <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[var(--border)] bg-[var(--muted)] flex-shrink-0">
+                    <div className="flex items-center gap-2 px-4 py-2 border-b border-[var(--border)] bg-[var(--muted)] flex-shrink-0">
                       <div className="flex gap-1.5">
                         <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(239,68,68,0.5)' }} />
                         <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(245,158,11,0.5)' }} />
@@ -236,12 +236,12 @@ export default function Cover() {
                         <span className="text-[10px] font-bold tracking-wide" style={{ color: '#a78bfa' }}>ACTIVE</span>
                       </div>
                     </div>
-                    <div className="relative p-5 sm:p-6 flex-1">
-                      <h3 className="text-base font-bold mb-1.5 tracking-tight text-[var(--foreground)]">
+                    <div className="relative p-4 sm:p-5 flex-1">
+                      <h3 className="text-base font-bold mb-1 tracking-tight text-[var(--foreground)]">
                         Niskala<span style={{ color: '#a78bfa' }}>Pure</span>
                       </h3>
-                      <p className="text-[var(--muted-foreground)] text-[13px] leading-relaxed mb-4">
-                        System-agnostic water chemistry lab. Thermodynamics + kinetics in one simulation.
+                      <p className="text-[var(--muted-foreground)] text-[13px] leading-relaxed mb-2">
+                        Water chemistry lab. Thermodynamics + kinetics.
                       </p>
                       <div className="flex items-center gap-1.5 text-[13px] font-semibold" style={{ color: '#a78bfa' }}>
                         Launch Lab <i className="fas fa-chevron-right" style={{ fontSize: '14px' }} />
@@ -255,9 +255,9 @@ export default function Cover() {
             <motion.button
               initial={{ opacity: 0, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.7 }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
               onClick={openCover}
-              className="btn-shimmer mt-12 inline-flex items-center gap-3 px-12 py-4 rounded-full bg-niskala-brand hover:bg-blue-600 text-white font-semibold text-base tracking-wide transition-colors duration-300 active:scale-95"
+              className="btn-shimmer inline-flex items-center gap-3 px-10 py-3 rounded-full bg-niskala-brand hover:bg-blue-600 text-white font-semibold text-sm tracking-wide transition-colors duration-300 active:scale-95"
               style={{ animation: 'coverPulse 3s ease-in-out infinite', boxShadow: '0 8px 32px rgba(81,112,255,0.3)' }}
             >
               <i className="fas fa-play text-sm" />
