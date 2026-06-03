@@ -35,241 +35,227 @@ export default function Cover() {
 
           <div className="relative z-10 max-w-5xl xl:max-w-6xl mx-auto px-4 sm:px-6 text-center" style={{ paddingTop: 'clamp(1.5rem, 5vh, 3rem)', paddingBottom: 'clamp(1.5rem, 5vh, 3rem)' }}>
 
-            <motion.h1
-              initial={{ opacity: 0, y: 16 }}
-              animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
-              className="font-extrabold tracking-tight leading-none inline-block mb-8"
-              style={{
-                fontSize: 'clamp(2.5rem, 5vw + 0.5rem, 4rem)',
-                background: 'linear-gradient(135deg, #5170ff 0%, #7b93ff 100%)',
-                WebkitBackgroundClip: 'text',
-                WebkitTextFillColor: 'transparent',
-                backgroundClip: 'text',
-                filter: 'drop-shadow(0 2px 8px rgba(81,112,255,0.2))',
-              }}
-            >
-              Niskala
-              <span style={{ background: 'none', WebkitTextFillColor: '#8aa0ff', color: '#8aa0ff' }}>.</span>
-            </motion.h1>
-
             <motion.div
               initial={{ opacity: 0, y: 12 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
-              className="inline-flex items-center gap-3 mb-6 px-3.5 py-1.5 rounded-full border border-niskala-brand/25 bg-niskala-brand/8 text-niskala-brand"
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.1 }}
             >
-              <span className="w-1.5 h-1.5 rounded-full bg-niskala-brand animate-pulse" />
-              <span className="text-[11px] font-bold tracking-[0.18em]">OPEN-ENGINE PLATFORM</span>
+              <div className="inline-flex items-center gap-2.5 mb-6 px-3.5 py-1.5 rounded-full border border-niskala-brand/25 bg-niskala-brand/8 text-niskala-brand">
+                <span className="w-1.5 h-1.5 rounded-full bg-niskala-brand animate-pulse" />
+                <span className="text-[11px] font-bold tracking-[0.18em]">OPEN-ENGINE PLATFORM</span>
+              </div>
             </motion.div>
 
-            <motion.h1
+            <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
-              className="font-bold tracking-tight text-[var(--foreground)] mb-5"
-              style={{ fontSize: 'clamp(1.75rem, 4vw + 0.5rem, 3.25rem)', lineHeight: 1.1 }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.2 }}
             >
-              Understand the Process.<br />
-              <span className="relative inline-block">
-                Trust the{' '}
-                <span
-                  className="font-bold"
-                  style={{
-                    background: 'linear-gradient(135deg, #5170ff 0%, #a78bfa 100%)',
-                    WebkitBackgroundClip: 'text',
-                    WebkitTextFillColor: 'transparent',
-                    backgroundClip: 'text',
-                  }}
-                >
-                  Result
-                </span>.
-              </span>
-            </motion.h1>
+              <h1 className="font-bold tracking-tight text-[var(--foreground)] mb-5" style={{ fontSize: 'clamp(1.75rem, 4vw + 0.5rem, 3.25rem)', lineHeight: 1.1 }}>
+                Understand the Process.<br />
+                <span className="relative inline-block">
+                  Trust the{' '}
+                  <span
+                    className="font-bold"
+                    style={{
+                      background: 'linear-gradient(135deg, #5170ff 0%, #a78bfa 100%)',
+                      WebkitBackgroundClip: 'text',
+                      WebkitTextFillColor: 'transparent',
+                      backgroundClip: 'text',
+                    }}
+                  >
+                    Result
+                  </span>.
+                </span>
+              </h1>
+            </motion.div>
 
-            <motion.p
+            <motion.div
               initial={{ opacity: 0, y: 10 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
-              className="text-[var(--muted-foreground)] mb-6 max-w-2xl mx-auto leading-relaxed"
-              style={{ fontSize: 'clamp(0.8rem, 1.2vw + 0.2rem, 1rem)' }}
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.3 }}
             >
-              Boutique simulation platform for water chemistry engineers. Every calculation
-              is traceable — from ion concentration to risk assessment — built for
-              precision and transparency.
-            </motion.p>
+              <p className="text-[var(--muted-foreground)] mb-4 max-w-2xl mx-auto leading-relaxed" style={{ fontSize: 'clamp(0.8rem, 1.2vw + 0.2rem, 1rem)' }}>
+                Boutique simulation platform for water chemistry engineers. Every calculation
+                is traceable — from ion concentration to risk assessment — built for
+                precision and transparency.
+              </p>
+            </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 8 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
-              className="flex flex-wrap items-center justify-center gap-3 mb-12 text-[11px] font-semibold text-[var(--muted-foreground)]"
+              transition={{ duration: 0.5, ease: [0.16, 1, 0.3, 1], delay: 0.4 }}
             >
-              <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--muted)] border border-[var(--border)]">
-                <i className="fas fa-flask text-niskala-brand text-xs" /> PHREEQC Pitzer Model
-              </span>
-              <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--muted)] border border-[var(--border)]">
-                <i className="fas fa-shield-alt text-niskala-brand text-xs" /> Vendor-Agnostic Audit
-              </span>
-              <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--muted)] border border-[var(--border)]">
-                <i className="fas fa-chart-bar text-niskala-brand text-xs" /> 6-Mineral Spatial Profile
-              </span>
-              <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--muted)] border border-[var(--border)]">
-                <i className="fas fa-book-open text-niskala-brand text-xs" /> Traceable Science
-              </span>
+              <div className="flex flex-wrap items-center justify-center gap-2 mb-10 text-[11px] font-semibold text-[var(--muted-foreground)]">
+                <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--muted)] border border-[var(--border)]">
+                  <i className="fas fa-flask text-niskala-brand" style={{ fontSize: '11px' }} /> PHREEQC Pitzer Model
+                </span>
+                <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--muted)] border border-[var(--border)]">
+                  <i className="fas fa-shield-alt text-niskala-brand" style={{ fontSize: '11px' }} /> Vendor-Agnostic Audit
+                </span>
+                <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--muted)] border border-[var(--border)]">
+                  <i className="fas fa-chart-bar text-niskala-brand" style={{ fontSize: '11px' }} /> 6-Mineral Spatial Profile
+                </span>
+                <span className="flex items-center gap-1.5 px-3 py-1 rounded-full bg-[var(--muted)] border border-[var(--border)]">
+                  <i className="fas fa-book-open text-niskala-brand" style={{ fontSize: '11px' }} /> Traceable Science
+                </span>
+              </div>
             </motion.div>
 
             <motion.div
               initial={{ opacity: 0, y: 20 }}
               animate={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.6 }}
-              className="grid grid-cols-1 md:grid-cols-3 gap-5 max-w-4xl mx-auto mb-10"
+              transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
             >
+              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto mb-8">
 
-              <div
-                className="relative rounded-xl p-px overflow-hidden cursor-default group h-full"
-                style={{ boxShadow: '0 0 0 1px rgba(81,112,255,0.12), 0 8px 32px rgba(81,112,255,0.10)' }}
-              >
                 <div
-                  className="absolute pointer-events-none"
-                  style={{
-                    inset: '-200%',
-                    animation: 'border-spin 5s linear infinite',
-                    background: 'conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 155deg, rgba(81,112,255,0.85) 180deg, rgba(167,139,250,0.85) 205deg, transparent 230deg, transparent 360deg)',
-                  }}
-                />
-                <div
-                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle, rgba(81,112,255,0.06) 1px, transparent 1px)',
-                    backgroundSize: '20px 20px',
-                  }}
-                />
-                <div className="relative bg-[var(--card)] rounded-xl text-left overflow-hidden h-full flex flex-col">
-                  <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[var(--border)] bg-[var(--muted)] flex-shrink-0">
-                    <div className="flex gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(239,68,68,0.5)' }} />
-                      <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(245,158,11,0.5)' }} />
-                      <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(16,185,129,0.5)' }} />
+                  className="relative rounded-xl p-px overflow-hidden cursor-default group h-full"
+                  style={{ boxShadow: '0 0 0 1px rgba(81,112,255,0.12), 0 8px 32px rgba(81,112,255,0.10)' }}
+                >
+                  <div
+                    className="absolute pointer-events-none"
+                    style={{
+                      inset: '-200%',
+                      animation: 'border-spin 5s linear infinite',
+                      background: 'conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 155deg, rgba(81,112,255,0.85) 180deg, rgba(167,139,250,0.85) 205deg, transparent 230deg, transparent 360deg)',
+                    }}
+                  />
+                  <div
+                    className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                    style={{
+                      backgroundImage: 'radial-gradient(circle, rgba(81,112,255,0.06) 1px, transparent 1px)',
+                      backgroundSize: '20px 20px',
+                    }}
+                  />
+
+                  <div className="relative bg-[var(--card)] rounded-xl text-left overflow-hidden h-full flex flex-col">
+                    <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[var(--border)] bg-[var(--muted)] flex-shrink-0">
+                      <div className="flex gap-1.5">
+                        <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(239,68,68,0.5)' }} />
+                        <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(245,158,11,0.5)' }} />
+                        <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(16,185,129,0.5)' }} />
+                      </div>
+                      <span className="text-[11px] font-mono text-[var(--muted-foreground)] ml-1">NiskalaRO</span>
+                      <div className="ml-auto flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full bg-niskala-brand animate-pulse" />
+                        <span className="text-[10px] font-bold text-niskala-brand tracking-wide">ACTIVE</span>
+                      </div>
                     </div>
-                    <span className="text-[11px] font-mono text-[var(--muted-foreground)] ml-1">NiskalaRO</span>
-                    <div className="ml-auto flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full bg-niskala-brand animate-pulse" />
-                      <span className="text-[10px] font-bold text-niskala-brand tracking-wide">ACTIVE</span>
+
+                    <div className="relative p-5 sm:p-6 flex-1">
+                      <h3 className="text-base font-bold mb-1.5 tracking-tight text-[var(--foreground)]">
+                        Niskala<span className="text-niskala-brand">RO</span>
+                      </h3>
+                      <p className="text-[var(--muted-foreground)] text-[13px] leading-relaxed mb-4">
+                        Scaling prediction for Reverse Osmosis. 72-cell reactive transport.
+                      </p>
+                      <div className="flex items-center gap-1.5 text-[13px] font-semibold text-niskala-brand">
+                        Launch <i className="fas fa-chevron-right" style={{ fontSize: '14px' }} />
+                      </div>
                     </div>
                   </div>
-                  <div className="relative p-6 flex-1">
-                    <h3 className="text-base font-bold mb-1.5 tracking-tight text-[var(--foreground)]">
-                      Niskala<span className="text-niskala-brand">RO</span>
-                    </h3>
-                    <p className="text-[var(--muted-foreground)] text-[13px] leading-relaxed mb-4">
-                      Scaling prediction for Reverse Osmosis. 72-cell reactive transport.
-                    </p>
-                    <div className="flex items-center gap-1.5 text-[13px] font-semibold text-niskala-brand">
-                      Launch <i className="fas fa-chevron-right text-xs" />
+                </div>
+
+                <div
+                  className="relative rounded-xl p-px overflow-hidden cursor-default group h-full"
+                  style={{ boxShadow: '0 0 0 1px rgba(20,184,166,0.12), 0 8px 32px rgba(20,184,166,0.10)' }}
+                >
+                  <div
+                    className="absolute pointer-events-none"
+                    style={{
+                      inset: '-200%',
+                      animation: 'border-spin 5s linear infinite',
+                      background: 'conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 155deg, rgba(20,184,166,0.85) 180deg, rgba(45,212,191,0.85) 205deg, transparent 230deg, transparent 360deg)',
+                    }}
+                  />
+                  <div
+                    className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                    style={{
+                      backgroundImage: 'radial-gradient(circle, rgba(20,184,166,0.06) 1px, transparent 1px)',
+                      backgroundSize: '20px 20px',
+                    }}
+                  />
+                  <div className="relative bg-[var(--card)] rounded-xl text-left overflow-hidden h-full flex flex-col">
+                    <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[var(--border)] bg-[var(--muted)] flex-shrink-0">
+                      <div className="flex gap-1.5">
+                        <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(239,68,68,0.5)' }} />
+                        <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(245,158,11,0.5)' }} />
+                        <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(16,185,129,0.5)' }} />
+                      </div>
+                      <span className="text-[11px] font-mono text-[var(--muted-foreground)] ml-1">NiskalaCT</span>
+                      <div className="ml-auto flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: '#14b8a6' }} />
+                        <span className="text-[10px] font-bold tracking-wide" style={{ color: '#14b8a6' }}>ACTIVE</span>
+                      </div>
+                    </div>
+                    <div className="relative p-5 sm:p-6 flex-1">
+                      <h3 className="text-base font-bold mb-1.5 tracking-tight text-[var(--foreground)]">
+                        Niskala<span style={{ color: '#14b8a6' }}>CT</span>
+                      </h3>
+                      <p className="text-[var(--muted-foreground)] text-[13px] leading-relaxed mb-4">
+                        Cooling tower water-cycle optimization and heat rejection management.
+                      </p>
+                      <div className="flex items-center gap-1.5 text-[13px] font-semibold" style={{ color: '#14b8a6' }}>
+                        Launch <i className="fas fa-chevron-right" style={{ fontSize: '14px' }} />
+                      </div>
+                    </div>
+                  </div>
+                </div>
+
+                <div
+                  className="relative rounded-xl p-px overflow-hidden cursor-default group h-full"
+                  style={{ boxShadow: '0 0 0 1px rgba(167,139,250,0.15), 0 8px 32px rgba(167,139,250,0.12)' }}
+                >
+                  <div
+                    className="absolute pointer-events-none"
+                    style={{
+                      inset: '-200%',
+                      animation: 'border-spin 5s linear infinite',
+                      background: 'conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 155deg, rgba(167,139,250,0.85) 180deg, rgba(139,92,246,0.85) 205deg, transparent 230deg, transparent 360deg)',
+                    }}
+                  />
+                  <div
+                    className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
+                    style={{
+                      backgroundImage: 'radial-gradient(circle, rgba(167,139,250,0.06) 1px, transparent 1px)',
+                      backgroundSize: '20px 20px',
+                    }}
+                  />
+                  <div className="relative bg-[var(--card)] rounded-xl text-left overflow-hidden h-full flex flex-col">
+                    <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[var(--border)] bg-[var(--muted)] flex-shrink-0">
+                      <div className="flex gap-1.5">
+                        <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(239,68,68,0.5)' }} />
+                        <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(245,158,11,0.5)' }} />
+                        <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(16,185,129,0.5)' }} />
+                      </div>
+                      <span className="text-[11px] font-mono text-[var(--muted-foreground)] ml-1">NiskalaPure</span>
+                      <div className="ml-auto flex items-center gap-1.5">
+                        <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: '#a78bfa' }} />
+                        <span className="text-[10px] font-bold tracking-wide" style={{ color: '#a78bfa' }}>ACTIVE</span>
+                      </div>
+                    </div>
+                    <div className="relative p-5 sm:p-6 flex-1">
+                      <h3 className="text-base font-bold mb-1.5 tracking-tight text-[var(--foreground)]">
+                        Niskala<span style={{ color: '#a78bfa' }}>Pure</span>
+                      </h3>
+                      <p className="text-[var(--muted-foreground)] text-[13px] leading-relaxed mb-4">
+                        System-agnostic water chemistry lab. Thermodynamics + kinetics in one simulation.
+                      </p>
+                      <div className="flex items-center gap-1.5 text-[13px] font-semibold" style={{ color: '#a78bfa' }}>
+                        Launch Lab <i className="fas fa-chevron-right" style={{ fontSize: '14px' }} />
+                      </div>
                     </div>
                   </div>
                 </div>
               </div>
-
-              <div
-                className="relative rounded-xl p-px overflow-hidden cursor-default group h-full"
-                style={{ boxShadow: '0 0 0 1px rgba(20,184,166,0.12), 0 8px 32px rgba(20,184,166,0.10)' }}
-              >
-                <div
-                  className="absolute pointer-events-none"
-                  style={{
-                    inset: '-200%',
-                    animation: 'border-spin 5s linear infinite',
-                    background: 'conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 155deg, rgba(20,184,166,0.85) 180deg, rgba(45,212,191,0.85) 205deg, transparent 230deg, transparent 360deg)',
-                  }}
-                />
-                <div
-                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle, rgba(20,184,166,0.06) 1px, transparent 1px)',
-                    backgroundSize: '20px 20px',
-                  }}
-                />
-                <div className="relative bg-[var(--card)] rounded-xl text-left overflow-hidden h-full flex flex-col">
-                  <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[var(--border)] bg-[var(--muted)] flex-shrink-0">
-                    <div className="flex gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(239,68,68,0.5)' }} />
-                      <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(245,158,11,0.5)' }} />
-                      <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(16,185,129,0.5)' }} />
-                    </div>
-                    <span className="text-[11px] font-mono text-[var(--muted-foreground)] ml-1">NiskalaCT</span>
-                    <div className="ml-auto flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: '#14b8a6' }} />
-                      <span className="text-[10px] font-bold tracking-wide" style={{ color: '#14b8a6' }}>ACTIVE</span>
-                    </div>
-                  </div>
-                  <div className="relative p-6 flex-1">
-                    <h3 className="text-base font-bold mb-1.5 tracking-tight text-[var(--foreground)]">
-                      Niskala<span style={{ color: '#14b8a6' }}>CT</span>
-                    </h3>
-                    <p className="text-[var(--muted-foreground)] text-[13px] leading-relaxed mb-4">
-                      Cooling tower water-cycle optimization and heat rejection management.
-                    </p>
-                    <div className="flex items-center gap-1.5 text-[13px] font-semibold" style={{ color: '#14b8a6' }}>
-                      Launch <i className="fas fa-chevron-right text-xs" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
-              <div
-                className="relative rounded-xl p-px overflow-hidden cursor-default group h-full"
-                style={{ boxShadow: '0 0 0 1px rgba(167,139,250,0.15), 0 8px 32px rgba(167,139,250,0.12)' }}
-              >
-                <div
-                  className="absolute pointer-events-none"
-                  style={{
-                    inset: '-200%',
-                    animation: 'border-spin 5s linear infinite',
-                    background: 'conic-gradient(from 0deg at 50% 50%, transparent 0deg, transparent 155deg, rgba(167,139,250,0.85) 180deg, rgba(139,92,246,0.85) 205deg, transparent 230deg, transparent 360deg)',
-                  }}
-                />
-                <div
-                  className="absolute inset-0 rounded-xl opacity-0 group-hover:opacity-100 transition-opacity pointer-events-none"
-                  style={{
-                    backgroundImage: 'radial-gradient(circle, rgba(167,139,250,0.06) 1px, transparent 1px)',
-                    backgroundSize: '20px 20px',
-                  }}
-                />
-                <div className="relative bg-[var(--card)] rounded-xl text-left overflow-hidden h-full flex flex-col">
-                  <div className="flex items-center gap-2 px-4 py-2.5 border-b border-[var(--border)] bg-[var(--muted)] flex-shrink-0">
-                    <div className="flex gap-1.5">
-                      <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(239,68,68,0.5)' }} />
-                      <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(245,158,11,0.5)' }} />
-                      <span className="w-2.5 h-2.5 rounded-full" style={{ background: 'rgba(16,185,129,0.5)' }} />
-                    </div>
-                    <span className="text-[11px] font-mono text-[var(--muted-foreground)] ml-1">NiskalaPure</span>
-                    <div className="ml-auto flex items-center gap-1.5">
-                      <span className="w-1.5 h-1.5 rounded-full animate-pulse" style={{ backgroundColor: '#a78bfa' }} />
-                      <span className="text-[10px] font-bold tracking-wide" style={{ color: '#a78bfa' }}>ACTIVE</span>
-                    </div>
-                  </div>
-                  <div className="relative p-6 flex-1">
-                    <h3 className="text-base font-bold mb-1.5 tracking-tight text-[var(--foreground)]">
-                      Niskala<span style={{ color: '#a78bfa' }}>Pure</span>
-                    </h3>
-                    <p className="text-[var(--muted-foreground)] text-[13px] leading-relaxed mb-4">
-                      System-agnostic water chemistry lab. Thermodynamics + kinetics in one simulation.
-                    </p>
-                    <div className="flex items-center gap-1.5 text-[13px] font-semibold" style={{ color: '#a78bfa' }}>
-                      Launch Lab <i className="fas fa-chevron-right text-xs" />
-                    </div>
-                  </div>
-                </div>
-              </div>
-
             </motion.div>
 
             <motion.button
               initial={{ opacity: 0, scale: 0.92 }}
               animate={{ opacity: 1, scale: 1 }}
-              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.8 }}
+              transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.7 }}
               onClick={openCover}
               className="btn-shimmer inline-flex items-center gap-3 px-12 py-4 rounded-full bg-niskala-brand hover:bg-blue-600 text-white font-semibold text-base tracking-wide transition-colors duration-300 active:scale-95"
               style={{ animation: 'coverPulse 3s ease-in-out infinite', boxShadow: '0 8px 32px rgba(81,112,255,0.3)' }}
