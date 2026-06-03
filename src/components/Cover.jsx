@@ -108,7 +108,7 @@ export default function Cover() {
               animate={{ opacity: 1, y: 0 }}
               transition={{ duration: 0.7, ease: [0.16, 1, 0.3, 1], delay: 0.5 }}
             >
-              <div className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto mb-8">
+              <div               className="grid grid-cols-1 md:grid-cols-3 gap-3 sm:gap-4 max-w-4xl mx-auto mb-12">
 
                 <div
                   className="relative rounded-xl p-px overflow-hidden cursor-default group h-full"
@@ -257,7 +257,7 @@ export default function Cover() {
               animate={{ opacity: 1, scale: 1 }}
               transition={{ duration: 0.6, ease: [0.16, 1, 0.3, 1], delay: 0.7 }}
               onClick={openCover}
-              className="btn-shimmer inline-flex items-center gap-3 px-12 py-4 rounded-full bg-niskala-brand hover:bg-blue-600 text-white font-semibold text-base tracking-wide transition-colors duration-300 active:scale-95"
+              className="btn-shimmer mt-12 inline-flex items-center gap-3 px-12 py-4 rounded-full bg-niskala-brand hover:bg-blue-600 text-white font-semibold text-base tracking-wide transition-colors duration-300 active:scale-95"
               style={{ animation: 'coverPulse 3s ease-in-out infinite', boxShadow: '0 8px 32px rgba(81,112,255,0.3)' }}
             >
               <i className="fas fa-play text-sm" />
