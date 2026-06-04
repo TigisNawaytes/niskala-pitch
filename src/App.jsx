@@ -3,11 +3,11 @@ import { motion, AnimatePresence } from 'framer-motion';
 import useSlideStore from './store/useSlideStore';
 import Cover from './components/Cover';
 
-import Slide01Cost from './slides/Slide01Cost';
-import Slide02BlindApproach from './slides/Slide02BlindApproach';
-import Slide03Philosophy from './slides/Slide03Philosophy';
 import Slide04IonsToRisk from './slides/Slide04IonsToRisk';
+import Slide05WhyPhreeqc from './slides/Slide05WhyPhreeqc';
 import Slide05PhreeqcEngine from './slides/Slide05PhreeqcEngine';
+import Slide06MassBalanceRO from './slides/Slide06MassBalanceRO';
+import Slide07MassBalanceCT from './slides/Slide07MassBalanceCT';
 import Slide06ScalingMass from './slides/Slide06ScalingMass';
 import Slide07Kinetics from './slides/Slide07Kinetics';
 import Slide08Literature from './slides/Slide08Literature';
@@ -26,8 +26,7 @@ import Slide20About from './slides/Slide20About';
 import Slide21Closing from './slides/Slide21Closing';
 
 const SLIDES = [
-  Slide01Cost, Slide02BlindApproach, Slide03Philosophy,
-  Slide04IonsToRisk, Slide05PhreeqcEngine, Slide06ScalingMass,
+  Slide04IonsToRisk, Slide05WhyPhreeqc, Slide05PhreeqcEngine, Slide06MassBalanceRO, Slide07MassBalanceCT, Slide06ScalingMass,
   Slide07Kinetics, Slide08Literature, Slide09OneEngine,
   Slide10NiskalaRO, Slide11NiskalaCT, Slide12CTKineticRace,
   Slide13NiskalaPure, Slide14ChemicalDB, Slide15AutoOptimization,
@@ -36,27 +35,27 @@ const SLIDES = [
 ];
 
 const ACT_META = [
-  { label: 'Act 1', name: 'The Problem', color: '#71717a', bg: 'rgba(113,113,122,0.08)', border: 'rgba(113,113,122,0.18)' },
-  { label: 'Act 1', name: 'The Problem', color: '#71717a', bg: 'rgba(113,113,122,0.08)', border: 'rgba(113,113,122,0.18)' },
-  { label: 'Act 1', name: 'The Problem', color: '#71717a', bg: 'rgba(113,113,122,0.08)', border: 'rgba(113,113,122,0.18)' },
-  { label: 'Act 2', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
-  { label: 'Act 2', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
-  { label: 'Act 2', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
-  { label: 'Act 2', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
-  { label: 'Act 2', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
-  { label: 'Act 3', name: 'The Application', color: '#5170ff', bg: 'rgba(81,112,255,0.08)', border: 'rgba(81,112,255,0.18)' },
-  { label: 'Act 3', name: 'The Application', color: '#5170ff', bg: 'rgba(81,112,255,0.08)', border: 'rgba(81,112,255,0.18)' },
-  { label: 'Act 3', name: 'The Application', color: '#5170ff', bg: 'rgba(81,112,255,0.08)', border: 'rgba(81,112,255,0.18)' },
-  { label: 'Act 3', name: 'The Application', color: '#5170ff', bg: 'rgba(81,112,255,0.08)', border: 'rgba(81,112,255,0.18)' },
-  { label: 'Act 3', name: 'The Application', color: '#5170ff', bg: 'rgba(81,112,255,0.08)', border: 'rgba(81,112,255,0.18)' },
-  { label: 'Act 4', name: 'The Strategy', color: '#14b8a6', bg: 'rgba(20,184,166,0.08)', border: 'rgba(20,184,166,0.18)' },
-  { label: 'Act 4', name: 'The Strategy', color: '#14b8a6', bg: 'rgba(20,184,166,0.08)', border: 'rgba(20,184,166,0.18)' },
-  { label: 'Act 4', name: 'The Strategy', color: '#14b8a6', bg: 'rgba(20,184,166,0.08)', border: 'rgba(20,184,166,0.18)' },
-  { label: 'Act 4', name: 'The Strategy', color: '#14b8a6', bg: 'rgba(20,184,166,0.08)', border: 'rgba(20,184,166,0.18)' },
-  { label: 'Act 5', name: 'The Depth', color: '#6366f1', bg: 'rgba(99,102,241,0.08)', border: 'rgba(99,102,241,0.18)' },
-  { label: 'Act 5', name: 'The Depth', color: '#6366f1', bg: 'rgba(99,102,241,0.08)', border: 'rgba(99,102,241,0.18)' },
-  { label: 'Act 5', name: 'The Depth', color: '#6366f1', bg: 'rgba(99,102,241,0.08)', border: 'rgba(99,102,241,0.18)' },
-  { label: 'Act 5', name: 'The Depth', color: '#6366f1', bg: 'rgba(99,102,241,0.08)', border: 'rgba(99,102,241,0.18)' },
+  { label: 'Act 1', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
+  { label: 'Act 1', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
+  { label: 'Act 1', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
+  { label: 'Act 1', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
+  { label: 'Act 1', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
+  { label: 'Act 1', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
+  { label: 'Act 1', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
+  { label: 'Act 1', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
+  { label: 'Act 2', name: 'The Application', color: '#5170ff', bg: 'rgba(81,112,255,0.08)', border: 'rgba(81,112,255,0.18)' },
+  { label: 'Act 2', name: 'The Application', color: '#5170ff', bg: 'rgba(81,112,255,0.08)', border: 'rgba(81,112,255,0.18)' },
+  { label: 'Act 2', name: 'The Application', color: '#5170ff', bg: 'rgba(81,112,255,0.08)', border: 'rgba(81,112,255,0.18)' },
+  { label: 'Act 2', name: 'The Application', color: '#5170ff', bg: 'rgba(81,112,255,0.08)', border: 'rgba(81,112,255,0.18)' },
+  { label: 'Act 2', name: 'The Application', color: '#5170ff', bg: 'rgba(81,112,255,0.08)', border: 'rgba(81,112,255,0.18)' },
+  { label: 'Act 3', name: 'The Strategy', color: '#14b8a6', bg: 'rgba(20,184,166,0.08)', border: 'rgba(20,184,166,0.18)' },
+  { label: 'Act 3', name: 'The Strategy', color: '#14b8a6', bg: 'rgba(20,184,166,0.08)', border: 'rgba(20,184,166,0.18)' },
+  { label: 'Act 3', name: 'The Strategy', color: '#14b8a6', bg: 'rgba(20,184,166,0.08)', border: 'rgba(20,184,166,0.18)' },
+  { label: 'Act 3', name: 'The Strategy', color: '#14b8a6', bg: 'rgba(20,184,166,0.08)', border: 'rgba(20,184,166,0.18)' },
+  { label: 'Act 4', name: 'The Depth', color: '#6366f1', bg: 'rgba(99,102,241,0.08)', border: 'rgba(99,102,241,0.18)' },
+  { label: 'Act 4', name: 'The Depth', color: '#6366f1', bg: 'rgba(99,102,241,0.08)', border: 'rgba(99,102,241,0.18)' },
+  { label: 'Act 4', name: 'The Depth', color: '#6366f1', bg: 'rgba(99,102,241,0.08)', border: 'rgba(99,102,241,0.18)' },
+  { label: 'Act 4', name: 'The Depth', color: '#6366f1', bg: 'rgba(99,102,241,0.08)', border: 'rgba(99,102,241,0.18)' },
 ];
 
 const slideVariants = {

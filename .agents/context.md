@@ -21,28 +21,25 @@ Project ini **terpisah** dari repo utama `~/Niskala/`. Project ini:
 - **Sekunder:** Manajemen vendor (slide partnership tidak disertakan — Act 6 dihapus per keputusan user)
 - **Durasi target:** ~20 menit presentasi
 
-## 4. Narrative Structure (5 Acts)
+## 4. Narrative Structure (4 Acts)
 ```
-ACT 1 — THE PROBLEM (slides 1-3)
-  Kenapa scaling mahal, blind dosing approach vs Niskala approach, filosofi open-engine
+ACT 1 — THE SCIENCE (slides 1-8)
+  Ions to Risk, PHREEQC credentials, PHREEQC engine, RO mass balance, CT mass balance, scaling mass, N-CNT kinetics, literature foundation
 
-ACT 2 — THE SCIENCE (slides 4-8)
-  SI fundamentals, PHREEQC engine, scaling mass, N-CNT kinetics, literature foundation
-
-ACT 3 — THE APPLICATION (slides 9-13)
+ACT 2 — THE APPLICATION (slides 9-13)
   RO + CT deep dive, kinetic race, NiskalaPure system-agnostic lab
 
-ACT 4 — THE STRATEGY (slides 14-17)
+ACT 3 — THE STRATEGY (slides 14-17)
   Chemical treatment database, 4-strategy auto-optimization, dose-response model, smart substitution
 
-ACT 5 — THE DEPTH (slides 18-21)
+ACT 4 — THE DEPTH (slides 18-21)
   DTPMP calibration evidence, validation roadmap, about the builder, closing
 ```
 
 ## 5. Key Messaging
 - **Filosofi inti:** "Understand the Process. Trust the Result."
-- **Positioning:** Open-engine, physics-based, vendor-agnostic, literature-grounded
-- **Differentiator:** Bukan blackbox — setiap kalkulasi traceable ke peer-reviewed science
+- **Positioning:** Open-engine, physics-based, fully transparent, literature-grounded
+- **Differentiator:** Setiap kalkulasi traceable ke peer-reviewed science — tidak ada asumsi tersembunyi
 - **Credibility:** 70+ data points dari Ahmed et al. (2024), DTPMP calibration dari Dai Table 2, 4 referensi primer
 
 ## 6. Technical Constraints

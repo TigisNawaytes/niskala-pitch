@@ -17,8 +17,7 @@ Baca kedua file berikut secara paralel:
 **Poin kunci yang harus dipahami:**
 - Ini adalah **web presentation**, bukan aplikasi dashboard — tidak ada backend, tidak ada API
 - Target: **pitching ke vendor chemical** yang tertarik white-label Niskala Platform
-- **21 slide** dalam 5 act narrative arc (Problem → Science → Application → Strategy → Depth)
-- Tidak ada Act 6 (Partnership) — dihapus per keputusan user
+- **21 slide** dalam 4 act narrative arc (Science → Application → Strategy → Depth)
 - Semua chart data adalah **dummy/ilustrasi**, bukan hasil kalkulasi real-time
 - Stack: React 19 + Vite 8 + Tailwind CSS v4 + Framer Motion + ECharts + Zustand
 
@@ -65,15 +64,16 @@ Baca secara paralel:
 ## Langkah 4: Pahami Isi Slide
 
 Untuk memahami konten presentasi, baca beberapa slide kunci:
-- `src/slides/Slide01Cost.jsx` — pembuka, stat scaling cost
 - `src/slides/Slide04IonsToRisk.jsx` — pipeline SI
+- `src/slides/Slide05WhyPhreeqc.jsx` — PHREEQC engine credentials
+- `src/slides/Slide06MassBalanceRO.jsx` — RO spatial transport (ROSSpy)
+- `src/slides/Slide07MassBalanceCT.jsx` — CT well-mixed mass balance
 - `src/slides/Slide08Literature.jsx` — 4 referensi + horizontal sub-pages
 - `src/slides/Slide15AutoOptimization.jsx` — 4-strategi cards
 - `src/slides/Slide18DTPMPCalib.jsx` — ECharts scatter calibration
 - `src/slides/Slide21Closing.jsx` — penutup
 
 **Tidak perlu membaca semua 21 slide** — baca beberapa dari setiap act untuk memahami pola.
-
 **Pola yang berlaku di semua slide:**
 - Setiap slide adalah `export default function SlideXX()` — tidak menerima props
 - Konten dibungkus `FragmentReveal` dengan `delay` staggered (0, 0.1, 0.25, 0.4, ...)
@@ -89,7 +89,7 @@ Sebelum mulai bekerja, pastikan:
 
 1. **Dependencies terinstall:**
    ```bash
-   cd /home/ssety/WebDev/niskala-pitch
+   cd /home/ssety/WebDev/niskala-pitch   # atau /home/clevraven90/WebDev/niskala-pitch — cek mana yang ada
    npm install   # jika node_modules belum ada
    ```
 
@@ -110,7 +110,7 @@ Sebelum mulai bekerja, pastikan:
 Setelah membaca file Langkah 1–4, berikan ringkasan singkat:
 
 1. **Status project** — kapan terakhir diupdate? (lihat entry terbaru `changelog.md`)
-2. **Jumlah slide & struktur act** — konfirmasi paham 5 act, 21 slide
+2. **Jumlah slide & struktur act** — konfirmasi paham 4 act, 21 slide
 3. **Design tokens** — sebutkan 3 brand color + font stack
 4. **State management** — konfirmasi paham Zustand store untuk navigasi
 5. **Konfirmasi siap** — nyatakan bahwa konteks sudah diserap dan siap bekerja

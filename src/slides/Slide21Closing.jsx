@@ -65,7 +65,7 @@ export default function Slide21Closing() {
 
         <FragmentReveal delay={0.25}>
           <p className="text-[var(--muted-foreground)] text-base sm:text-lg max-w-xl leading-relaxed">
-            Physics-based. Vendor-agnostic. Traceable to peer-reviewed science.
+            Physics-based. Fully transparent. Traceable to peer-reviewed science.
           </p>
         </FragmentReveal>
 

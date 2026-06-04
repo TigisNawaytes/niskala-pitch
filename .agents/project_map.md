@@ -2,7 +2,7 @@
 
 ## Folder Structure
 ```
-/home/ssety/WebDev/niskala-pitch/
+/home/ssety/WebDev/niskala-pitch/  (atau /home/clevraven90/WebDev/niskala-pitch/)
 ├── .agents/               # Agent context (this folder)
 │   ├── context.md         # Project purpose, narrative structure
 │   ├── design.md          # Visual identity, components, navigation
@@ -29,43 +29,39 @@
     │   └── RaceBar.jsx        # Animated horizontal progress bar
     │
     └── slides/                # 21 slide components (one per slide)
-        ├── Slide01Cost.jsx             # ACT 1: Scaling cost stats
-        ├── Slide02BlindApproach.jsx    # ACT 1: Blind dosing vs Niskala
-        ├── Slide03Philosophy.jsx       # ACT 1: Open-engine philosophy
-        ├── Slide04IonsToRisk.jsx       # ACT 2: SI pipeline
-        ├── Slide05PhreeqcEngine.jsx    # ACT 2: PHREEQC + 7 minerals
-        ├── Slide06ScalingMass.jsx      # ACT 2: Scaling mass & surface loading
-        ├── Slide07Kinetics.jsx         # ACT 2: t_ind vs T_res race
-        ├── Slide08Literature.jsx       # ACT 2: 4 literature cards + sub-pages
-        ├── Slide09OneEngine.jsx        # ACT 3: RO + CT overview
-        ├── Slide10NiskalaRO.jsx        # ACT 3: RO deep dive + heatmap
-        ├── Slide11NiskalaCT.jsx        # ACT 3: CT + COC chart (ECharts)
-        ├── Slide12CTKineticRace.jsx    # ACT 3: CT before/after kinetic race
-        ├── Slide13NiskalaPure.jsx      # ACT 3: Pure dose-response chart (ECharts)
-        ├── Slide14ChemicalDB.jsx       # ACT 4: Inhibitor database tables
-        ├── Slide15AutoOptimization.jsx # ACT 4: 4-strategy cards
-        ├── Slide16DoseResponse.jsx     # ACT 4: Dose-response chart (ECharts)
-        ├── Slide17SmartSubstitution.jsx# ACT 4: Smart substitution example
-        ├── Slide18DTPMPCalib.jsx       # ACT 5: Calibration scatter chart (ECharts)
-        ├── Slide19Validation.jsx       # ACT 5: Validation roadmap timeline
-        ├── Slide20About.jsx            # ACT 5: Builder profile + quote
-        └── Slide21Closing.jsx          # ACT 5: Final logo + tagline + module cards
+        ├── Slide04IonsToRisk.jsx       # ACT 1: SI pipeline
+        ├── Slide05WhyPhreeqc.jsx       # ACT 1: PHREEQC engine credentials
+        ├── Slide05PhreeqcEngine.jsx    # ACT 1: PHREEQC thermodynamic core
+        ├── Slide06MassBalanceRO.jsx    # ACT 1: RO spatial transport (ROSSpy)
+        ├── Slide07MassBalanceCT.jsx    # ACT 1: CT well-mixed mass balance
+        ├── Slide06ScalingMass.jsx      # ACT 1: Scaling mass & surface loading
+        ├── Slide07Kinetics.jsx         # ACT 1: t_ind vs T_res race
+        ├── Slide08Literature.jsx       # ACT 1: 4 literature cards + sub-pages
+        ├── Slide09OneEngine.jsx        # ACT 2: RO + CT overview
+        ├── Slide10NiskalaRO.jsx        # ACT 2: RO deep dive + heatmap
+        ├── Slide11NiskalaCT.jsx        # ACT 2: CT + COC chart (ECharts)
+        ├── Slide12CTKineticRace.jsx    # ACT 2: CT before/after kinetic race
+        ├── Slide13NiskalaPure.jsx      # ACT 2: Pure dose-response chart (ECharts)
+        ├── Slide14ChemicalDB.jsx       # ACT 3: Inhibitor database tables
+        ├── Slide15AutoOptimization.jsx # ACT 3: 4-strategy cards
+        ├── Slide16DoseResponse.jsx     # ACT 3: Dose-response chart (ECharts)
+        ├── Slide17SmartSubstitution.jsx# ACT 3: Smart substitution example
+        ├── Slide18DTPMPCalib.jsx       # ACT 4: Calibration scatter chart (ECharts)
+        ├── Slide19Validation.jsx       # ACT 4: Validation roadmap timeline
+        ├── Slide20About.jsx            # ACT 4: Builder profile + quote
+        └── Slide21Closing.jsx          # ACT 4: Final logo + tagline + module cards
 ```
 
 ## Key Files to Know
 
 ### `App.jsx` (container + navigation)
-- Imports all 21 slides into `SLIDES` array
+- Imports all 18 slides into `SLIDES` array
 - Renders `Cover` component when `coverVisible=true`
 - Uses `AnimatePresence` + Framer Motion for slide transitions
 - Keyboard event listener for ← → Escape
 - Renders nav dots, arrow buttons, progress bar when cover dismissed
 - `slideVariants`: enter (slide from right), center, exit (slide to left)
-
-### `useSlideStore.js` (state)
-- Zustand store — single source of truth for navigation state
-- `coverVisible`: starts `true`, set `false` on "Begin Presentation" click
-- `currentSlide`: 0-20, drives which slide component renders
+- `currentSlide`: 0-17, drives which slide component renders
 - `direction`: 1 or -1, used by Framer Motion for correct animation direction
 
 ### `index.css` (design tokens)

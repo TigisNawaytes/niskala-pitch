@@ -125,4 +125,4 @@ goToSlide(index) / nextSlide() / prevSlide()
 - Consistent text sizing: `axisLabel fontSize: 9`, `nameTextStyle fontSize: 10`, color `#71717a`
 
 ## 6. Dark Mode
-Tidak diimplementasikan. Presentasi ini **light mode only** (`#f8f8fa` background). Slide 03 (Philosophy) dan 20 (About) menggunakan subtle brand-tinted background.
+Tidak diimplementasikan. Presentasi ini **light mode only** (`#f8f8fa` background). Slide 20 (About) menggunakan subtle brand-tinted background.

@@ -110,9 +110,9 @@ export default function Slide20About() {
           <CardPitch className="max-w-2xl mx-auto text-center">
             <div className="text-[5rem] leading-none text-niskala-brand/10 font-serif absolute -top-4 -left-2 select-none">&ldquo;</div>
             <p className="text-[var(--foreground)] italic text-base sm:text-lg leading-relaxed font-medium px-8 relative z-10">
-              &ldquo;I built Niskala because I was tired of blackbox chemical recommendations
-              that couldn&rsquo;t be verified. Every engineer deserves to understand why a dose
-              works &mdash; not just trust the vendor&rsquo;s word.&rdquo;
+              &ldquo;I built Niskala to give engineers the tools to verify, understand, and trust
+              every chemical recommendation. Physics doesn&rsquo;t lie — and neither should
+              your software.&rdquo;
             </p>
             <div className="text-[5rem] leading-none text-niskala-brand/10 font-serif absolute -bottom-8 -right-2 select-none rotate-180">&ldquo;</div>
             <p className="text-[var(--muted-foreground)] text-xs font-semibold mt-3 uppercase tracking-wider">

@@ -10,7 +10,7 @@
 | | |
 |---|---|
 | **Project utama** | Niskala Platform — Physics-Based Water Quality Simulation |
-| **Lokasi** | `~/Niskala/` (`/home/ssety/Niskala/`) |
+| **Lokasi** | `~/Niskala/` (`/home/ssety/Niskala/` atau `/home/clevraven90/Niskala/` — cek mana yang ada) |
 | **Branch aktif** | `feat/vendor-si-limits` (commit `6cdd0dc`, 2026-06-02) |
 | **Dokumentasi utama** | `~/Niskala/.agents/`, `~/Niskala/docs/` |
 | **Literatur** | `~/Niskala/knowledges/` (4 referensi primer) |
@@ -22,12 +22,11 @@
 ### Created
 - **Project scaffold:** React 19 + Vite 8 + Tailwind CSS v4 + Framer Motion + ECharts + Zustand
 - **Design system:** CSS variables dan Tailwind tokens disinkronkan dari Niskala UI (`~/Niskala/frontend/src/index.css`)
-- **21 slide components** dalam 5 act narrative arc:
-  - **Act 1 — The Problem (3 slides):** Scaling cost, blind dosing vs Niskala, open-engine philosophy
-  - **Act 2 — The Science (5 slides):** SI pipeline, PHREEQC engine, scaling mass, kinetics, literature foundation
-  - **Act 3 — The Application (5 slides):** One engine two systems, RO deep dive, CT deep dive, kinetic race, NiskalaPure
-  - **Act 4 — The Strategy (4 slides):** Chemical database, 4-strategy optimization, dose-response model, smart substitution
-  - **Act 5 — The Depth (4 slides):** DTPMP calibration evidence, validation roadmap, about the builder, closing
+- **21 slide components** dalam 4 act narrative arc:
+  - **Act 1 — The Science (8 slides):** Ions to Risk, PHREEQC credentials, PHREEQC engine, RO mass balance (ROSSpy), CT mass balance (COC), scaling mass, kinetics, literature foundation
+  - **Act 2 — The Application (5 slides):** One engine two systems, RO deep dive, CT deep dive, kinetic race, NiskalaPure
+  - **Act 3 — The Strategy (4 slides):** Chemical database, 4-strategy optimization, dose-response model, smart substitution
+  - **Act 4 — The Depth (4 slides):** DTPMP calibration evidence, validation roadmap, about the builder, closing
 - **5 reusable components:** `FragmentReveal`, `SectionLabel`, `CardPitch`, `RaceBar`, `Cover`
 - **Navigation system:** Framer Motion AnimatePresence slide transitions, keyboard nav, nav dots, progress bar
 - **4 ECharts charts** dengan dummy data: COC scan, dose-response curve, MED curve, DTPMP calibration scatter
@@ -43,7 +42,7 @@
 
 ### Technical Notes
 - **Build:** 0 errors, 1.4MB bundle (ECharts + Framer Motion)
-- **Dev server:** `npm run dev` dari `/home/ssety/WebDev/niskala-pitch/`
+- **Dev server:** `npm run dev` dari `/home/ssety/WebDev/niskala-pitch/` (atau `/home/clevraven90/WebDev/niskala-pitch/` — cek mana yang ada)
 - **Production build:** `npm run build` → `dist/`, bisa di-deploy ke static hosting
 - **Dependencies:** React 19, Vite 8, echarts-for-react 3, framer-motion 12, zustand 5, tailwindcss 4
 - Slide transitions menggunakan horizontal slide (300px enter/exit) dengan spring physics
