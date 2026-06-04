@@ -55,3 +55,31 @@ Semua konten teknis dan sains diambil dari project utama Niskala:
 - **Calibration data:** DTPMP K=5.0, α=0.040 dari Dai Table 2 (grid search 8 data points)
 - **RO dose-response:** 70+ data points, SI_eff = SI_membrane − ΔSI_max × (1 − e^−k·dose) × 0.8
 - **Module details:** RO 6-element×12-cell, CT well-mixed COC, Pure dose-response sweep
+
+## 2026-06-04 — Slide Animations & Visual Overhaul (Session 2)
+
+### Added
++ **Slide04 — KineticCanvas:** 4-phase calcite scaling particle simulation (Canvas 2D)
+  - Partikel: Ca²⁺ (#5170ff), CO₃²⁻ (#14b8a6), CaCO₃ kerak (#94a3b8)
+  - Fase: Undersaturated → Evaporation → Supersaturated → Precipitation (~18s)
+  - Kontrol Play/Reset, phase indicator, timer, legend
++ **Slide06ROTransport — ROTransportCanvas:** 5-scene 1D mass transport visualization
+  - Pipa horizontal 6 cell dengan membran bawah (dashed line)
+  - Partikel air permeate turun, ion terpantul, kerak terbentuk di Cell 2–3
+  - Scene 5: grafik prediksi ROSSpy (peak di Cell 2–3, turun ke 0)
+  - Navigasi Prev/Next + 5 dot indicator
++ **Slide06MassBalanceRO — Vessel diagram:** SVG pressure vessel 6 membrane × 12 cells
+  - Degradasi warna mulai Membrane 2 (M1 hijau → M6 merah tua)
+  - Feed (biru), Reject (merah), Permeate (ungu gradient) pipes
+  - 3-card bawah: Key Cells (3 membrane), Core Equations, ROSSpy Reference
+
+### Modified
++ **Slide04:** Beaker animation original dihapus, diganti KineticCanvas
++ **Slide06MassBalanceRO:** Heatmap grid dihapus, diperpadat vertikal (padding/margin dikurangi)
+  - Background classes: Semua slide menggunakan `bg-hero-pattern` + `bg-radial-brand` + `bg-radial-fade`
+
+### Technical
++ New components: `KineticCanvas.jsx`, `ROTransportCanvas.jsx`
++ New slide: `Slide06ROTransport.jsx`
++ Build: 0 errors, ~1.5MB bundle
++ Git push: `e8538a4` on main
