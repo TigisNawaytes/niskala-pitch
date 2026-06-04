@@ -77,9 +77,13 @@ Semua konten teknis dan sains diambil dari project utama Niskala:
 + **Slide04:** Beaker animation original dihapus, diganti KineticCanvas
 + **Slide06MassBalanceRO:** Heatmap grid dihapus, diperpadat vertikal (padding/margin dikurangi)
   - Background classes: Semua slide menggunakan `bg-hero-pattern` + `bg-radial-brand` + `bg-radial-fade`
++ **Slide09OneEngine:** Redesain total — pipeline diagram 6 step + 4+4 mode cards
+  - Pipeline: Water Quality → CBE Balance → Mass Balance → PHREEQC → Condition → Optimization
+  - NiskalaRO 4 modes: pH Adjustment, Antiscalant, Hybrid, Recovery
+  - NiskalaCT 4 modes: pH Adjustment, Antiscalant, Hybrid, COC Reduction
 
 ### Technical
 + New components: `KineticCanvas.jsx`, `ROTransportCanvas.jsx`
 + New slide: `Slide06ROTransport.jsx`
 + Build: 0 errors, ~1.5MB bundle
-+ Git push: `e8538a4` on main
++ Git push: `f878ddc` on main
