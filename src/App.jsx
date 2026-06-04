@@ -6,6 +6,7 @@ import Cover from './components/Cover';
 import Slide04IonsToRisk from './slides/Slide04IonsToRisk';
 import Slide05WhyPhreeqc from './slides/Slide05WhyPhreeqc';
 import Slide05PhreeqcEngine from './slides/Slide05PhreeqcEngine';
+import Slide06ROTransport from './slides/Slide06ROTransport';
 import Slide06MassBalanceRO from './slides/Slide06MassBalanceRO';
 import Slide07MassBalanceCT from './slides/Slide07MassBalanceCT';
 import Slide06ScalingMass from './slides/Slide06ScalingMass';
@@ -26,7 +27,7 @@ import Slide20About from './slides/Slide20About';
 import Slide21Closing from './slides/Slide21Closing';
 
 const SLIDES = [
-  Slide04IonsToRisk, Slide05WhyPhreeqc, Slide05PhreeqcEngine, Slide06MassBalanceRO, Slide07MassBalanceCT, Slide06ScalingMass,
+  Slide04IonsToRisk, Slide05WhyPhreeqc, Slide05PhreeqcEngine, Slide06ROTransport, Slide06MassBalanceRO, Slide07MassBalanceCT, Slide06ScalingMass,
   Slide07Kinetics, Slide08Literature, Slide09OneEngine,
   Slide10NiskalaRO, Slide11NiskalaCT, Slide12CTKineticRace,
   Slide13NiskalaPure, Slide14ChemicalDB, Slide15AutoOptimization,
@@ -35,6 +36,7 @@ const SLIDES = [
 ];
 
 const ACT_META = [
+  { label: 'Act 1', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
   { label: 'Act 1', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
   { label: 'Act 1', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
   { label: 'Act 1', name: 'The Science', color: '#a78bfa', bg: 'rgba(167,139,250,0.08)', border: 'rgba(167,139,250,0.18)' },
